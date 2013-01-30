@@ -14,12 +14,18 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('tr', gettext('Turkish')),
+    ('de', gettext('German')),
+    )
+
 CMS_LANGUAGES = (
     ('en', gettext('English')),
     ('tr', gettext('Turkish')),
     ('de', gettext('German')),
 )
-DEFAULT_LANGUAGE = 0
+DEFAULT_LANGUAGE = 1
 
 DATABASES = {
     'default': {
@@ -97,6 +103,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
+    'django.core.context_processors.request',
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
 )
@@ -131,12 +138,15 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.staticfiles',
-    'djangocms_column',
+
     'mycmsproject.products',
+
+
     'cms',
     'menus',
     'mptt',
     'south',
+
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',
@@ -144,4 +154,7 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'sekizai',
+    'modeltranslation',
 )
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'tr'
