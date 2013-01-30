@@ -1,0 +1,19 @@
+{% load cms_tags sekizai_tags menu_tags %}
+<html>
+  <head>
+  	  <title>{{ request.current_page.get_title }}</title>
+	  <meta name="description" content="{% page_attribute meta_description %}"/>
+	  <meta name="keywords" content="{% page_attribute meta_keywords %}"/>
+      {% render_block "css" %}
+      {% block headertags %}
+          {% include "elements/header_tags.html" %}
+      {% endblock %}
+  </head>
+  <body>
+      {% cms_toolbar %}
+      {% include "elements/header.html" %}
+      {% block base_content %}{% endblock %}
+      {% include "elements/footer.html" %}
+      {% render_block "js" %}
+  </body>
+</html>

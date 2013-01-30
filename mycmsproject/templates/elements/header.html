@@ -1,0 +1,30 @@
+{% load cms_tags menu_tags %}
+<div id="header-wall">
+    <div class="header-bar">
+        <div class="bar">
+            <div class="flags"><a href="{% page_language_url "tr" %}"><img src="{{ MEDIA_URL }}img/tr.png"/></a>&nbsp;&nbsp;&nbsp;<a href="{% page_language_url "en" %}"><img src="{{ MEDIA_URL }}img/en.png"/></a>&nbsp;&nbsp;&nbsp;<a href="{% page_language_url "de" %}"><img src="{{ MEDIA_URL }}img/alm.png"/></a></div>
+        </div>
+    </div>
+    <div class="header">
+        <p class="logo"><img src="{{ MEDIA_URL }}img/logo.png"/></p>
+        <p class="header-img"><img src="{{ MEDIA_URL }}img/header-img.png"/></p>
+    </div>
+</div>
+<div id="menu-wall">
+    <div class="menu">
+        <ul>
+            {% show_menu 0 100 0 0 %}
+          <!--  <li><a href="index.php">ANASAYFA</a></li>
+            <li><a href="#">FİRMA</a></li>
+            <li><a href="#">HAKKIMIZDA</a></li>
+            <li><a href="urunler.php">SU POMPALARI</a></li>
+            <li><a href="ithal_urunler.php">İTHAL ÜRÜNLER</a></li>
+            <li><a href="#">ÜRÜN TALEP FORMU</a></li>
+            <li><a href="#">SERTİFİKALAR</a></li>
+            <li><a href="#">İNSAN KAYNAKLARI</a></li>
+            <li><a href="#">İLETİŞİM</a></li>
+            <li><a href="#">FAALİYETLER</a></li> -->
+        </ul>
+    </div>
+</div>
+{% block banner_wall %}{% endblock %}

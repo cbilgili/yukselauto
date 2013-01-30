@@ -1,0 +1,19 @@
+{% extends 'content_product.html' %}
+
+{% block prodoct_left %}
+    {% include "products/elements/product_leftmenu.html" %}
+{% endblock %}
+
+
+{% block content %}
+<h1>Products</h1>
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no products.</p>
+    {% endif %}
+{% endblock %}
