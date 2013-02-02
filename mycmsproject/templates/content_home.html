@@ -2,19 +2,20 @@
 {% load cms_tags menu_tags%}
 
 {% block banner_wall %}
-<div id="banner-wall">
-    <div id="headerimgs">
-        <div id="headerimg1" class="headerimg"></div>
-        <div id="headerimg2" class="headerimg"></div>
+    <div id="banner-wall">
+        <div id="headerimgs">
+            <div id="headerimg1" class="headerimg"></div>
+            <div id="headerimg2" class="headerimg"></div>
+        </div>
     </div>
-</div>
+    <div id="banner-wall-alt"> <!-- SİLME --> </div>
 {% endblock %}
 
 {% block base_content %}
     <div id="content-wall">
         <div class="content-left-right">
             <div class="left-column">
-                left home
+                {% placeholder content_left_content %}
                 <!--  <div class="change-product-img"><?php include 'change_product_img.php'; ?></div> -->
             </div>
             <div class="right-column">

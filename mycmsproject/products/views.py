@@ -1,4 +1,5 @@
 # Create your views here.
+# coding: utf-8
 from django.template import RequestContext
 from products.models import Product, Category, ProductType
 from django.shortcuts import render_to_response, get_object_or_404
@@ -29,10 +30,11 @@ def view_category(request, category_id, parentslug, slug, product_type):
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))
 
-"""
-Bu methodla ürünlerin türüne göre sol menü için kategori verisi çekilir
-"""
+
+
+
 def get_category_all(request):
+    """Bu methodla ürünlerin türüne göre sol menü için kategori verisi çekilir"""
     page_id = request.current_page.reverse_id
     if page_id == 'ithal_urunler':
         product_type_obj = ProductType.objects.get(pk=1)

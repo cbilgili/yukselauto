@@ -1,0 +1,75 @@
+{% load mptt_tags %}
+<span class="ct_title">{{   category_all.0.product_type }}</span></td>
+
+<ul class="root">
+    {% recursetree category_all %}
+        <li><a href="{{ node.get_absolute_url }}">{{ node.name }}</a>{% if not node.is_leaf_node %}
+            <ul class="children">
+                {{ children }}
+            </ul>
+        {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>
+
+
+<ul id="product-title_list">
+    <li>1.DEBRİYAJ DİSK VE BASKILARI
+        <ul>
+            <li><a href="#"><a href="#">A) FORD TRANSIT</a></li>
+            <li><a href="#">B) ISUZU</a></li>
+            <li><a href="#">C) MITSUBISHI</a></li>
+            <li><a href="#">D) IVECO - MAN - RENAULT - SCANIA - VOLVO</a></li>
+            <li><a href="#">E) FIAT TRAKTÖR</a></li>
+            <li><a href="#">F) MF TRAKTÖR</a></li>
+        </ul>
+    </li>
+    <li>2.FREN DİSK VE SAÇLARI
+        <ul>
+            <li><a href="#">A) FORD TRAKTÖR</a></li>
+            <li><a href="#">B) FIAT TRAKTÖR</a></li>
+            <li><a href="#">C) MF TRAKTÖR</a></li>
+        </ul>
+    </li>
+    <li>3.KAYIŞLAR
+        <ul>
+            <li><a href="#">A) V KAYIŞLARI</a></li>
+            <li><a href="#">B) KANALLI (PK) KAYIŞLARI</a></li>
+            <li><a href="#">C) TRİGER KAYIŞLARI</a></li>
+        </ul>
+    </li>
+    <li><a href="#">4.MAFSAL İSTAVROZLARI </a></li>
+    <li>5.SU POMPALARI
+        <ul>
+            <li>A) GP ( ITALYAN ) MARKA SU POMPALARI
+                <ul>
+                    <li><a href="#">CITROEN</a></li>
+                    <li><a href="#">BEDFORD - DAEWOO - PONTIAC</a></li>
+                    <li><a href="#">DACIA</a></li>
+                    <li><a href="#">FORD</a></li>
+                    <li><a href="#">HYUNDAI</a></li>
+                    <li><a href="#">MITSUBISHI</a></li>
+                    <li><a href="#">MAZDA</a></li>
+                    <li><a href="#">OPEL</a></li>
+                    <li><a href="#">PEUGEOT</a></li>
+                    <li><a href="#">RENAULT</a></li>
+                    <li><a href="#">SKODA</a></li>
+                    <li><a href="#">VOLVO</a></li>
+                </ul>
+            </li>
+            <li>B) DİĞER SU POMPALARI
+                <ul>
+                    <li><a href="#">CITROEN</a></li>
+                    <li><a href="#">HYUNDAI</a></li>
+                    <li><a href="#">KIA</a></li>
+                    <li><a href="#">MAZDA</a></li>
+                    <li><a href="#">MITSUBISHI</a></li>
+                    <li><a href="#">NISSAN</a></li>
+                    <li><a href="#">PEUGEOT</a></li>
+                    <li><a href="#">SUZUKI</a></li>
+                    <li><a href="#">TOYOTA</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
