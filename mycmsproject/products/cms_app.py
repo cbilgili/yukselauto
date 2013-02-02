@@ -4,6 +4,6 @@ from django.utils.translation import ugettext_lazy as _
 
 class ProductsApp(CMSApp):
     name = _("Product App") # give your app a name, this is required
-    urls = ["mycmsproject.products.urls"] # link your app to url configuration(s)
+    urls = ["products.urls"] # link your app to url configuration(s)
 
 apphook_pool.register(ProductsApp) # register your app

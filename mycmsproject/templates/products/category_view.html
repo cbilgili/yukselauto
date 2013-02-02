@@ -1,0 +1,24 @@
+{% extends 'content_product.html' %}
+{% load i18n %}
+
+{% block prodoct_left %}
+    {% include "products/elements/product_leftmenu.html" %}
+{% endblock %}
+
+
+{% block content %}
+<h1>{% if category.parent.name %}{{ category.parent.name }} &gt; {% endif %}{{ category.name }}</h1>
+    {% if products %}
+        <table>
+            {% for product in products %}
+                <tr>
+                    <td><a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>{% trans "There are no products." %}</p>
+    {% endif %}
+{% endblock %}

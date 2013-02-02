@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 import os
-
+import sys
 gettext = lambda s: s
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
-
+sys.path.insert(0, os.path.join(PROJECT_DIR))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.dirname((os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -98,7 +101,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
     'django.core.context_processors.media',
@@ -124,7 +127,7 @@ CMS_FRONTEND_LANGUAGES = ("en", "tr", "de")
 
 CMS_SEO_FIELDS = True
 
-ROOT_URLCONF = 'mycmsproject.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
@@ -139,13 +142,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.staticfiles',
 
-    'mycmsproject.products',
+    'products',
 
 
     'cms',
     'menus',
     'mptt',
     'south',
+    'rosetta',
 
     'cms.plugins.text',
     'cms.plugins.picture',

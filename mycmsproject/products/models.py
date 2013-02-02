@@ -7,7 +7,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 # Create your models here.
 class ProductType(models.Model):
     name = models.CharField(max_length=50, null=True)
-    slug = models.SlugField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=False)
 
     def __unicode__(self):
         return '%s' % self.name
@@ -18,42 +18,41 @@ class ProductType(models.Model):
 
 
 class Category(MPTTModel):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=150)
     slug = models.SlugField(max_length=100, unique=True)
     product_type = models.ForeignKey(ProductType, null=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
-
-    class MPTTMeta:
-
-        order_insertion_by = ['name']
-
-    def __unicode__(self):
-        return '%s' % self.name
-
-    @permalink
-    def get_absolute_url(self):
-        return 'view_category_entry', None, { 'name': self.name }
+    position = models.PositiveSmallIntegerField("Position", default=0)
 
 
+    class Meta:
+        ordering = ['position']
 
-class Brand(models.Model):
-    name = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=100, unique=True)
+    #class MPTTMeta:
+    #   order_insertion_by = ['name']
 
     def __unicode__(self):
         return '%s' % self.name
 
     @permalink
     def get_absolute_url(self):
-        return 'view_brand_entry', None, { 'slug': self.slug }
+        if self.parent:
+            return 'view_category_entry', None, { 'slug': self.slug, 'parentslug': self.parent.slug, 'category_id': self.id, 'product_type': self.product_type.slug }
+        else:
+            return 'view_category_entry', None, { 'slug': self.slug, 'parentslug': 'category', 'category_id': self.id, 'product_type': self.product_type.slug }
+
 
 
 class Product(models.Model):
+    image = models.ImageField(upload_to='products')
+    oem = models.CharField(max_length=250)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
+    engine = models.CharField(max_length=200)
+    type = models.CharField(max_length=200)
+    description = models.TextField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)
 
-    brand = models.ForeignKey(Brand)
     category = models.ForeignKey(Category, null=True)
 
     def __unicode__(self):
