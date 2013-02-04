@@ -1,0 +1,82 @@
+{% load i18n %}
+<table class="form-icerik-arama" width="280" cellspacing="0" cellpadding="0" border="0" background="{{ MEDIA_URL }}img/catalog-bg.gif" height="354">
+    <tr>
+        <td colspan="2" valign="middle" align="center" height="22"><span class="ct_title">{% trans "YUKSEL NO / OEM NO SEARCH" %}</span></td>
+    </tr>
+    <tr>
+        <td colspan="2"  align="center">
+            <form method="POST" action="arama_sonuclari.php" id="arama">
+                <table width="230">
+                    <tr>
+                        <td><input type="text" name="no-arama"/></td>
+                        <td><input type="submit" src="{{ MEDIA_URL }}img/btn-search.gif" value="{% trans "Search" %}"/></td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+    <tr><td colspan="2" valign="bottom" align="center"><img src="{{ MEDIA_URL }}img/hr.gif"/></td></tr>
+    <tr><td colspan="2" valign="bottom" align="center"><img src="{{ MEDIA_URL }}img/hr.gif"/></td></tr>
+    <tr>
+        <td colspan="2" valign="bottom" align="center">
+            <form method="POST" action="" id="kategori-arama">
+                <table class="form-urun-arama" cellspacing="0" cellpadding="0" border="0">
+                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Ürün Kategorisi</span></td></tr>
+                    <tr>
+                        <td valign="bottom" align="left">
+                            <select name="urun_kategori"><option>Seçiniz</option></select>
+                        </td>
+                    </tr>
+                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Marka</span></td></tr>
+                    <tr>
+                        <td valign="bottom" align="left">
+                            <select name="marka">
+                                <option value="0">Seçiniz</option>
+                                <option value="1">DAF</option>
+                                <option value="2">FRUEHAUF</option>
+                                <option value="3">IVECO</option>
+                                <option value="4">JOST</option>
+                                <option value="5">KASSBOHRER</option>
+                                <option value="6">MAN</option>
+                                <option value="7">MERCEDES</option>
+                                <option value="8">NEOPLAN</option>
+                                <option value="9">RINGFEDER</option>
+                                <option value="10">ROR</option>
+                                <option value="11">RVI</option>
+                                <option value="12">SAE-GIGANT</option>
+                                <option value="13">SCANIA</option>
+                                <option value="14">SCHMITZ</option>
+                                <option value="15">SETRA</option>
+                                <option value="16">SMB</option>
+                                <option value="17">SNVI</option>
+                                <option value="18">TRAILOR</option>
+                                <option value="19">UNIVERSAL</option>
+                                <option value="20">VBG</option>
+                                <option value="21">VOLVO</option>
+                                <option value="22">YORK</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!--   <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Model</span></td></tr>
+                      <tr>
+                          <td valign="bottom" align="left">
+                              <select name="model"><option>Seçiniz</option></select>
+                          </td>
+                      </tr>
+
+                     <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Ürün Grubu</span></td></tr>
+                      <tr>
+                          <td valign="bottom" align="left">
+                              <select name="urun_grub"><option>Seçiniz</option></select>
+                          </td>
+                      </tr> -->
+                    <tr><td valign="top" align="right" height="25"><input type="submit" value="{% trans "Search" %}"/></td></tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+    <!-- <tr><td colspan="2" valign="bottom" align="center"><img src="{{ MEDIA_URL }}img/hr.gif"/></td></tr> -->
+    <tr>
+        <td colspan="2" valign="bottom" align="center"></td>
+    </tr>
+</table>

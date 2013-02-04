@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'products',
+    'guest',
 
 
     'cms',

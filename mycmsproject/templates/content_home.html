@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags menu_tags%}
+{% load cms_tags menu_tags i18n%}
 
 {% block banner_wall %}
     <div id="banner-wall">
@@ -13,17 +13,30 @@
 
 {% block base_content %}
     <div id="content-wall">
-        <div class="content-left-right">
-            <div class="left-column">
-                {% placeholder content_left_content %}
-                <!--  <div class="change-product-img"><?php include 'change_product_img.php'; ?></div> -->
-            </div>
-            <div class="right-column">
-                <div class="content">
-                    {% placeholder content_main_content %}
-                    {% block content %}{% endblock %}
-                </div>
-            </div>
-        </div>
+        <table class="content-table">
+            <tr>
+                <td>
+                    {% include "elements/home/search.html" %}
+                </td>
+                <td>
+                    <p class="ct_title">{% trans "NEWS FROM YUKSEL AUTOMATIVE" %}</p>
+                    <img src="{{ MEDIA_URL }}img/news.jpg"/>
+                    {% placeholder news_from_yuksel %}
+                </td>
+                <td>
+                    <p class="ct_title">{% trans "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE" %}</p>
+                    <img src="{{ MEDIA_URL }}img/urun-degisim.jpg"/>
+                    <div class="change-product-img">{% include "elements/home/change_product_img.html" %}</div>
+                </td>
+            </tr>
+            <tr>
+                <td><div class="doviz-kuru">{% include "elements/home/doviz_kuru.html" %}</div></td>
+                <td align="center" colspan="2">
+                    <div class="bakis">
+                        <p class="bakis-text">{% placeholder slogan %}</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 {% endblock %}

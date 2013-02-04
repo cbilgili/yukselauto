@@ -1,0 +1,35 @@
+<script language="JavaScript">
+    function random_imglink(){
+        var myimages=new Array()
+        myimages[1]="/media/img/product/YO-01.jpg"
+        myimages[2]="/media/img/product/YO-02.jpg"
+        myimages[3]="/media/img/product/YO-04.jpg"
+        myimages[4]="/media/img/product/YO-05.jpg"
+        myimages[5]="/media/img/product/YO-06.jpg"
+        myimages[6]="/media/img/product/YO-07.jpg"
+        myimages[7]="/media/img/product/YO-08.jpg"
+        myimages[8]="/media/img/product/YO-09.jpg"
+        myimages[9]="/media/img/product/YO-10.jpg"
+        myimages[10]="/media/img/product/YO-11.jpg"
+        myimages[11]="/media/img/product/YO-12.jpg"
+
+        var imagelinks=new Array()
+        imagelinks[1]="/urunler.php"
+        imagelinks[2]="/urunler.php"
+        imagelinks[3]="/urunler.php"
+        imagelinks[4]="/urunler.php"
+        imagelinks[5]="/urunler.php"
+        imagelinks[6]="/urunler.php"
+        imagelinks[7]="/urunler.php"
+        imagelinks[8]="/urunler.php"
+        imagelinks[9]="/urunler.php"
+        imagelinks[10]="/urunler.php"
+        imagelinks[11]="/urunler.php"
+
+        var ry=Math.floor(Math.random()*myimages.length)
+        if (ry==0)
+            ry=1
+        document.write('<a href='+'"'+imagelinks[ry]+'"'+'><img src="'+myimages[ry]+'" border=0></a>')
+    }
+    random_imglink()
+</script>
