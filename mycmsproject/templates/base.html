@@ -12,6 +12,7 @@
   <body>
       {% cms_toolbar %}
       {% include "elements/header.html" %}
+      {% block banner_wall %}{% endblock %}
       {% block base_content %}{% endblock %}
       {% include "elements/footer.html" %}
       {% render_block "js" %}

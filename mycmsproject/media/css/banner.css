@@ -22,8 +22,8 @@ body {/*letter-spacing:1; */}
 .headerimg { background-position: center top; background-repeat: no-repeat; width:100%; height:600px; position:absolute; }
 
 /* NAVIGATION */
-#nav-outer { height:110px; padding-top:11px; position:relative; top:24px; background-image:url("../images/headerbg.png"); }
-#navigation { height:100px; width:960px; margin:0 auto; background-image:url("../images/logo.png"); background-position:top left; background-repeat:no-repeat; }
+#nav-outer { height:110px; padding-top:11px; position:relative; top:24px; background-image:url("/media/img/headerbg.png"); }
+#navigation { height:100px; width:960px; margin:0 auto; background-image:url("/media/img/logo.png"); background-position:top left; background-repeat:no-repeat; }
 
 /* SEARCH */
 #search { background-color:#051733; float:right; width:220px; padding:10px; }
@@ -39,8 +39,8 @@ body {/*letter-spacing:1; */}
 
 /* HEADER TEXT */
 #headertxt { width:960px; margin:0 auto; clear:both; position:relative; top:74px; }
-#firstline { background-image:url("../images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
-#secondline { background-image:url("../images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
+#firstline { background-image:url("/media/img/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
+#secondline { background-image:url("/media/img/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
 #secondline:hover { text-decoration:underline; color:#7F000C; }
 
 .pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
@@ -49,9 +49,9 @@ body {/*letter-spacing:1; */}
 
 /* CONTROLS */
 .btn { height:32px; width:32px; float:left; cursor:pointer; }
-#back { background-image:url("../images/btn_back.png"); }
-#next { background-image:url("../images/btn_next.png"); }
-#control { background-image:url("../images/btn_pause.png"); }
+#back { background-image:url("/media/img/btn_back.png"); }
+#next { background-image:url("/media/img/btn_next.png"); }
+#control { background-image:url("/media/img/btn_pause.png"); }
 
 /* HEADER HAVIGATION */
 #headernav-outer { position:relative; top:400px; margin:0 auto; width:960px; }

@@ -23,11 +23,6 @@ LANGUAGES = (
     ('de', gettext('German')),
     )
 
-CMS_LANGUAGES = (
-    ('en', gettext('English')),
-    ('tr', gettext('Turkish')),
-    ('de', gettext('German')),
-)
 DEFAULT_LANGUAGE = 1
 
 DATABASES = {
