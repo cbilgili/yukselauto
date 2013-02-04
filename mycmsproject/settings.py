@@ -140,6 +140,8 @@ INSTALLED_APPS = (
 
     'products',
     'guest',
+    'search',
+
 
 
     'cms',
@@ -147,6 +149,7 @@ INSTALLED_APPS = (
     'mptt',
     'south',
     'rosetta',
+
 
     'cms.plugins.text',
     'cms.plugins.picture',
@@ -156,6 +159,7 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'modeltranslation',
+    'selectable',
 )
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'tr'

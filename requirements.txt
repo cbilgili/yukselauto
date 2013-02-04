@@ -3,9 +3,12 @@ PIL==1.1.7
 South==0.7.6
 django-classy-tags==0.4
 django-cms==2.3.5
+django-grappelli==2.4.3
 django-modeltranslation==0.5b1
 django-mptt==0.5.5
+django-rosetta==0.6.8
 django-sekizai==0.7
+django-selectable==0.6.2
 djangocms-column==1.1.2
 html5lib==0.95
 wsgiref==0.1.2
