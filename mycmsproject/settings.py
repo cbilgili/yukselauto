@@ -140,7 +140,6 @@ INSTALLED_APPS = (
 
     'products',
     'guest',
-    'search',
 
 
 
