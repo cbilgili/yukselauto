@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
+    url(r'^djangojs/', include('djangojs.urls')),
 )
 
 if settings.DEBUG:
@@ -16,4 +17,5 @@ if settings.DEBUG:
         url(r'', include('django.contrib.staticfiles.urls')),
         url(r'^rosetta/', include('rosetta.urls')),
         (r'^selectable/', include('selectable.urls')),
+        (r'^forms/', include('form_designer.urls')),
     ) + urlpatterns

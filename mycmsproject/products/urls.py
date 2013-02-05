@@ -1,6 +1,8 @@
 from django.conf.urls.defaults import patterns, url
 
 from products import views
+from products.views import search_sub_category, search_product
+
 
 urlpatterns = patterns('',
     # ex: /polls/
@@ -13,6 +15,12 @@ urlpatterns = patterns('',
         r'^(?P<slug>[^\.]+).html',
         'products.views.view_product',
         name='view_product_entry'),
+    # Process a category
+    url(r'^ajax/(?P<category_id>\d+)/$',
+        search_sub_category,
+        name='search_sub_category'),
+    url(r'^search/$',
+        search_product),
 
     # ex: /polls/5/
     #url(r'^(?P<poll_id>\d+)/$', views.detail, name='detail'),

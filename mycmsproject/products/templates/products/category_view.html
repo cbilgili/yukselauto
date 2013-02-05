@@ -7,12 +7,16 @@
 
 
 {% block content %}
-<h1>{% if category.parent.name %}{{ category.parent.name }} &gt; {% endif %}{{ category.name }}</h1>
+    {% block content-title %}
+        <h1>{% if category.parent.name %}{{ category.parent.name }} &gt; {% endif %}{{ category.name }}</h1>
+    {% endblock %}
+
     {% if products %}
         <table>
             {% for product in products %}
                 <tr>
-                    <td><a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a></td>
+                    <td><a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}"
+                                                                      alt="{{ product.title }}" width="100"></a></td>
                     <td><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></td>
                     <td><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
                 </tr>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-01 13:49+0200\n"
+"POT-Creation-Date: 2013-02-05 16:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,42 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: settings.py:21 settings.py:27 settings.py:121
+#: settings.py:21 settings.py:116
 msgid "English"
 msgstr ""
 
-#: settings.py:22 settings.py:28 settings.py:122
+#: settings.py:22 settings.py:117
 msgid "Turkish"
 msgstr ""
 
-#: settings.py:23 settings.py:29 settings.py:123
+#: settings.py:23 settings.py:118
 msgid "German"
+msgstr ""
+
+#: guest/cms_plugins.py:10
+msgid "Hello Plugin"
 msgstr ""
 
 #: products/cms_app.py:6
 msgid "Product App"
 msgstr ""
 
-#: templates/products/index.html:15
-msgid "Image"
+#: products/cms_plugins.py:12
+msgid "Product Search Plugin"
 msgstr ""
 
-#: templates/products/index.html:16
-msgid "Name"
-msgstr ""
-
-#: templates/products/index.html:31
+#: products/templates/products/category_view.html:26
+#: products/templates/products/index.html:31
 msgid "There are no products."
 msgstr ""
 
-#: templates/products/product_view.html:10
+#: products/templates/products/index.html:15
+msgid "Image"
+msgstr ""
+
+#: products/templates/products/index.html:16
+msgid "Name"
+msgstr ""
+
+#: products/templates/products/product_view.html:11
 msgid "Engine"
 msgstr ""
 
-#: templates/products/product_view.html:11
+#: products/templates/products/product_view.html:12
 msgid "Type"
 msgstr ""
 
-#: templates/products/product_view.html:12
+#: products/templates/products/product_view.html:13
 msgid "Details"
+msgstr ""
+
+#: products/templates/products/search_results.html:4
+msgid "Return to search"
+msgstr ""
+
+#: products/templates/products/search_results.html:8
+msgid "Search results"
+msgstr ""
+
+#: templates/content_home.html:22
+msgid "NEWS FROM YUKSEL AUTOMATIVE"
+msgstr ""
+
+#: templates/content_home.html:27
+msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
+msgstr ""
+
+#: templates/search_plugin.html:5
+msgid "YUKSEL NO / OEM NO SEARCH"
+msgstr ""
+
+#: templates/search_plugin.html:13 templates/search_plugin.html.py:57
+msgid "Search"
+msgstr ""
+
+#: templates/search_plugin.html:25
+msgid "Category"
+msgstr ""
+
+#: templates/search_plugin.html:28
+msgid "Please Choose"
+msgstr ""
+
+#: templates/search_plugin.html:36
+msgid "Brand"
+msgstr ""
+
+#: templates/search_plugin.html:40
+msgid "^-- Please Choose Category"
 msgstr ""

@@ -143,6 +143,7 @@ INSTALLED_APPS = (
 
 
 
+
     'cms',
     'menus',
     'mptt',
@@ -159,6 +160,9 @@ INSTALLED_APPS = (
     'sekizai',
     'modeltranslation',
     'selectable',
+    'djangojs',
+    'form_designer',
+    'form_designer.contrib.cms_plugins.form_designer_form',
 )
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'tr'

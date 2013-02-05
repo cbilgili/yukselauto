@@ -1,0 +1,9 @@
+{% extends 'products/category_view.html' %}
+{% load i18n %}
+
+{% block prodoct_left %}<a href="/">{% trans "Return to search" %}</a>{% endblock %}
+
+
+{% block content-title %}
+    <h1>{% trans "Search results" %}: {{ term }}</h1>
+{% endblock %}

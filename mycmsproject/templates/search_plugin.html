@@ -1,4 +1,4 @@
-{% load selectable_tags i18n %}
+{% load selectable_tags i18n cms_tags menu_tags %}
 {% include_jquery_libs %}
 <table class="form-icerik-arama" width="280" cellspacing="0" cellpadding="0" border="0" background="{{ MEDIA_URL }}img/catalog-bg.gif" height="354">
     <tr>
@@ -6,10 +6,10 @@
     </tr>
     <tr>
         <td colspan="2"  align="center">
-            <form method="POST" action="arama_sonuclari.php" id="arama">
+            <form method="get" action="{% page_url "su-pompalari" %}search" id="arama">
                 <table width="230">
                     <tr>
-                        <td><input type="text" name="no-arama"/></td>
+                        <td><input type="text" name="oem"/></td>
                         <td><input type="submit" src="{{ MEDIA_URL }}img/btn-search.gif" value="{% trans "Search" %}"/></td>
                     </tr>
                 </table>
@@ -20,41 +20,24 @@
     <tr><td colspan="2" valign="bottom" align="center"><img src="{{ MEDIA_URL }}img/hr.gif"/></td></tr>
     <tr>
         <td colspan="2" valign="bottom" align="center">
-            <form method="POST" action="" id="kategori-arama">
+            <form method="get" action="{% page_url "su-pompalari" %}search" id="kategori-arama">
                 <table class="form-urun-arama" cellspacing="0" cellpadding="0" border="0">
-                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Ürün Kategorisi</span></td></tr>
+                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">{% trans "Category" %}</span></td></tr>
                     <tr>
                         <td valign="bottom" align="left">
-                            <select name="urun_kategori"><option>Seçiniz</option></select>
+                            <select name="urun_kategori" id="root_category"><option>{% trans "Please Choose" %}</option>
+                            {% for category in root_categories %}
+                                <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                            </select>
+
                         </td>
                     </tr>
-                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">Marka</span></td></tr>
+                    <tr><td valign="bottom" align="left" height="20"><span class="ct_title">{% trans "Brand" %}</span></td></tr>
                     <tr>
                         <td valign="bottom" align="left">
-                            <select name="marka">
-                                <option value="0">Seçiniz</option>
-                                <option value="1">DAF</option>
-                                <option value="2">FRUEHAUF</option>
-                                <option value="3">IVECO</option>
-                                <option value="4">JOST</option>
-                                <option value="5">KASSBOHRER</option>
-                                <option value="6">MAN</option>
-                                <option value="7">MERCEDES</option>
-                                <option value="8">NEOPLAN</option>
-                                <option value="9">RINGFEDER</option>
-                                <option value="10">ROR</option>
-                                <option value="11">RVI</option>
-                                <option value="12">SAE-GIGANT</option>
-                                <option value="13">SCANIA</option>
-                                <option value="14">SCHMITZ</option>
-                                <option value="15">SETRA</option>
-                                <option value="16">SMB</option>
-                                <option value="17">SNVI</option>
-                                <option value="18">TRAILOR</option>
-                                <option value="19">UNIVERSAL</option>
-                                <option value="20">VBG</option>
-                                <option value="21">VOLVO</option>
-                                <option value="22">YORK</option>
+                            <select id="marka" name="marka">
+                                <option value="0">{% trans "^-- Please Choose Category" %}</option>
                             </select>
                         </td>
                     </tr>
@@ -81,3 +64,18 @@
         <td colspan="2" valign="bottom" align="center"></td>
     </tr>
 </table>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //console.log(Django.url('search_sub_category',1));
+        $('#root_category').change(function() {
+            $.get("{% page_url "su-pompalari" %}ajax/"+$(this).val(),
+                    function(data) {
+                        var sel = $("#marka");
+                        sel.empty();
+                        for (var i=0; i<data.length; i++) {
+                            sel.append('<option value="' + data[i].pk + '">' + data[i].name + '</option>');
+                        }
+                    }, "json");
+        });
+    });
+</script>
