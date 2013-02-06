@@ -2,6 +2,8 @@
 {% load i18n %}
 {% block head_title %}{{ product.title }}{% endblock %}
 {% block title %}{{ product.title }}{% endblock %}
+{% block meta-description %}{{ product.meta_description }}{% endblock %}
+{% block meta-keywords %}{{ product.meta_keywords }}{% endblock %}
 
 {% block content %}
     <h1>{{ product.title }}</h1>
@@ -15,5 +17,5 @@
 {% endblock %}
 
 {% block prodoct_left %}
-    {% include "elements/product_leftmenu.html" %}
+    {% include "products/elements/product_leftmenu.html" %}
 {% endblock %}

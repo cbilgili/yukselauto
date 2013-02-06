@@ -149,6 +149,7 @@ INSTALLED_APPS = (
     'mptt',
     'south',
     'rosetta',
+    'cmsplugin_yandexmap',
 
 
     'cms.plugins.text',

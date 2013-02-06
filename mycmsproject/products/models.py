@@ -23,6 +23,8 @@ class Category(MPTTModel):
     product_type = models.ForeignKey(ProductType, null=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
     position = models.PositiveSmallIntegerField("Position", default=0)
+    meta_keywords = models.TextField(max_length=200, null=True)
+    meta_description = models.CharField(max_length=200, null=True)
 
 
     class Meta:
@@ -52,6 +54,8 @@ class Product(models.Model):
     type = models.CharField(max_length=200)
     description = models.TextField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)
+    meta_keywords = models.CharField(max_length=200, null=True)
+    meta_description = models.CharField(max_length=200, null=True)
 
     category = models.ForeignKey(Category, null=True)
 

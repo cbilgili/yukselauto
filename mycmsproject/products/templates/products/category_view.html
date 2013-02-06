@@ -1,5 +1,10 @@
 {% extends 'content_product.html' %}
 {% load i18n %}
+{% block head_title %}{{ category.name }}{% endblock %}
+{% block title %}{{ category.name }}{% endblock %}
+{% block meta-description %}{{ category.meta_description }}{% endblock %}
+{% block meta-keywords %}{{ category.meta_keywords }}{% endblock %}
+
 
 {% block prodoct_left %}
     {% include "products/elements/product_leftmenu.html" %}
