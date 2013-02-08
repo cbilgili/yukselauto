@@ -7,27 +7,49 @@
 
 
 {% block content %}
-<h1>Products</h1>
+<h3>{% trans "PRODUCTS" %}</h3>
     {% if products %}
-        <table>
+        <table id="product" width="640" align="center" cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
-                        <td>{% trans "Image" %}</td>
+                        <td width="100">{% trans "Image" %}</td>
+                        <td>{% trans "Brand" %}</td>
                         <td>{% trans "Name" %}</td>
-                        <td>OEM</td>
+                        <td width="170" align="right">{% trans "OEM Numbers" %}</td>
                     </tr>
                 </thead>
                <tbody>
             {% for product in products %}
-                <tr>
-                    <td><a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a></td>
+                <tr style="cursor: pointer;" onmouseover="this.bgColor='#F7F7F7'" onmouseout="this.bgColor='#FEFEFE'">
+                    <td>
+                        <div class="imageRow">
+                            <div class="single">
+                                <a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.category }}</a></td>
                     <td><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></td>
-                    <td><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
+                    <td align="right"><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
                 </tr>
             {% endfor %}
                 </tbody>
         </table>
     {% else %}
-        <p>{% trans "There are no products." %}</p>
+        <table id="product" width="640" align="center" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <td width="100">{% trans "Image" %}</td>
+            <td>{% trans "Brand" %}</td>
+            <td>{% trans "Name" %}</td>
+            <td width="170" align="right">{% trans "OEM Numbers" %}</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="4"><p>{% trans "There are no products." %}</p></td>
+        </tr>
+        </tbody>
+        </table>
     {% endif %}
 {% endblock %}

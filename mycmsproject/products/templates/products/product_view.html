@@ -6,14 +6,43 @@
 {% block meta-keywords %}{{ product.meta_keywords }}{% endblock %}
 
 {% block content %}
-    <h1>{{ product.title }}</h1>
-    <h4>{{ product.category.parent.name }} &gt; <a href="{{ product.category.get_absolute_url }}">{{ product.category.name }}</a></h4>
-    <p><img src="{{MEDIA_URL}}{{ product.image }}" alt=""></p>
-    <p>OEM: {{ product.oem }}</p>
-    <p>{% trans "Engine" %}: {{ product.engine }}</p>
-    <p>{% trans "Type" %}: {{ product.type }}</p>
-    <p>{% trans "Details" %}: {{ product.description }}</p>
-    <p>{{ product.created }}</p>
+
+    <div class=pr-child-title>{{ product.category.parent.name }} &gt; <a href="{{ product.category.get_absolute_url }}">{{ product.category.name }}</a></div>
+    <h2>{{ product.title }}</h2>
+    <table class="pr-detail" width="640" align="center" cellspacing="0" cellpadding="0">
+
+        <tr>
+            <th colspan="4">{{ product.created }}</th>
+        </tr>
+        <tr>
+            <th width="100">{% trans "OEM Numbers" %}</th>
+            <th width="5"> : </th>
+            <td>{{ product.oem }}</td>
+            <td rowspan="4" width="190" style="border-left:1px solid #1484C5;">
+                <div class="imageRow">
+                    <div class="single">
+                        <a rel="lightbox" href="{{MEDIA_URL}}{{ product.image }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="" width="175"></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>{% trans "Engine" %}</th>
+            <th> : </th>
+            <td>{{ product.engine }}</td>
+        </tr>
+        <tr>
+            <th>{% trans "Type" %}</th>
+            <th> : </th>
+            <td>{{ product.type }}</td>
+        </tr>
+        <tr>
+            <th>{% trans "Details" %}</th>
+            <th> : </th>
+            <td>{{ product.description }}</td>
+        </tr>
+    </table>
+
 {% endblock %}
 
 {% block prodoct_left %}

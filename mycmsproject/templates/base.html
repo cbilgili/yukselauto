@@ -12,7 +12,9 @@
   <body>
       {% cms_toolbar %}
       {% include "elements/header.html" %}
-      {% block banner_wall %}{% endblock %}
+      {% block banner_wall %}
+          <div id="banner-wall-alt"> <!-- SİLME --> </div>
+      {% endblock %}
       {% block base_content %}{% endblock %}
       {% include "elements/footer.html" %}
       {% render_block "js" %}

@@ -14,22 +14,22 @@
         myimages[11]="/media/img/product/YO-12.jpg"
 
         var imagelinks=new Array()
-        imagelinks[1]="/urunler.php"
-        imagelinks[2]="/urunler.php"
-        imagelinks[3]="/urunler.php"
-        imagelinks[4]="/urunler.php"
-        imagelinks[5]="/urunler.php"
-        imagelinks[6]="/urunler.php"
-        imagelinks[7]="/urunler.php"
-        imagelinks[8]="/urunler.php"
-        imagelinks[9]="/urunler.php"
-        imagelinks[10]="/urunler.php"
-        imagelinks[11]="/urunler.php"
+        imagelinks[1]="/media/img/product/YO-01.jpg"
+        imagelinks[2]="/media/img/product/YO-02.jpg"
+        imagelinks[3]="/media/img/product/YO-04.jpg"
+        imagelinks[4]="/media/img/product/YO-05.jpg"
+        imagelinks[5]="/media/img/product/YO-06.jpg"
+        imagelinks[6]="/media/img/product/YO-07.jpg"
+        imagelinks[7]="/media/img/product/YO-08.jpg"
+        imagelinks[8]="/media/img/product/YO-09.jpg"
+        imagelinks[9]="/media/img/product/YO-10.jpg"
+        imagelinks[10]="/media/img/product/YO-11.jpg"
+        imagelinks[11]="/media/img/product/YO-12.jpg"
 
         var ry=Math.floor(Math.random()*myimages.length)
         if (ry==0)
             ry=1
-        document.write('<a href='+'"'+imagelinks[ry]+'"'+'><img src="'+myimages[ry]+'" border=0></a>')
+        document.write('<a rel="lightbox" href='+'"'+imagelinks[ry]+'"'+'><img src="'+myimages[ry]+'" border=0></a>')
     }
     random_imglink()
 </script>

@@ -1,18 +1,22 @@
-body {margin:0; padding:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#515151;  background:none repeat scroll 0 0 #C8C9CB; }
+body {margin:0; padding:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#515151;  background:none repeat scroll 0 0 #C8C9CB; }
 
 table, tr, td {
     color: #515151;
     font-family: Arial;
-    font-size: 11px;
+    font-size: 12px;
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {color:#005CA1; margin:5px 0 22px !important;}
 
 img {border:none}
 
 p {line-height: 18px; text-align: justify; text-indent:10px;}
 
-.ct_title {color:#828282; font-weight:bold; text-decoration:none; margin-bottom:12px;}
+.ct_title {color:#515151; font-weight:bold; text-decoration:none; margin-bottom:12px;}
+
+.pr-child-title {color:#515151; font-weight:bold; font-size:12px; margin:6px 0 27px}
 
 #header-wall {clear:both; background:none repeat scroll 0 0 #FFFFFF; height:164px;}
 #header-wall .header-bar {clear:both; background:none repeat scroll 0 0 #C8C9CB; height:23px;  border-bottom: 1px solid #B6B7B9;}
@@ -23,10 +27,12 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #header-wall .header p.header-img{text-align:right; float:right}
 
 #menu-wall {clear:both; background:url(/media/img/menu-bg.png) repeat-x #1B2940;}
-#menu-wall .menu {margin:auto; text-align:center; padding:11px 0 12px 0;}
+#menu-wall .menu {margin:auto; text-align:center; padding:11px 0 12px;}
 #menu-wall .menu ul {list-style:none outside none;}
 #menu-wall .menu ul li {display:inline; height:48px;}
-#menu-wall .menu ul li a {color:#FFF; font-size:13px; font-weight: bold; padding:10px 10px 12px 10px; text-decoration: none;}
+#menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
+#menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;}
+#menu-wall .menu ul li a {color:#FFF; font-size:13px; font-weight: bold; padding:11px 10px 12px 10px; text-decoration: none;}
 #menu-wall .menu ul li a:hover {background:url(/media/img/transparent.png) repeat; color:#1B2940}
 
 .flash-shadow {clear:both; background:none repeat scroll 0 0 #DBDBDB;}
@@ -36,7 +42,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #content-wall {background:url(/media/img/content-bg.jpg) repeat-x #FFF; clear:both; overflow:auto;}
 
-#content-wall .content-table {width:960px; min-height:530px; margin:auto; padding:25px 0; background:#FFF}
+#content-wall .content-table {width:960px; min-height:530px; margin:auto; padding:12px 0 25px; background:#FFF}
 #content-wall .content-table tr td {vertical-align:top; width:320px; padding:10px 20px;}
 #content-wall .content-table tr td p {width:280px; margin-top:12px}
 
@@ -53,7 +59,9 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #content-wall .doviz-kuru {width:278px; margin:30px 0 0; border:1px solid #C1BFBF;}
 
-#content-wall .content-left-right {width:960px; min-height:850px; margin:auto; padding:25px 0; background:#FFF}
+#content-wall .content-left-right {width:960px; min-height:670px; margin:auto; padding:12px 0 25px; background:#FFF}
+
+#content-wall .content-left-right .content {padding:5px 17px; min-height:600px; overflow:auto}
 
 #content-wall .content-left-right .left-column{width:279px; float:left; padding:10px}
 
@@ -61,10 +69,11 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .left-column .change-product-img img {width:200px; height:150px; margin:9px; padding:5px; background:#FFF; border:1px solid #C1BFBF;}
 
 
-#content-wall .content-left-right .left-column div.wall {width:265px; height:660px; overflow:auto; padding:6px; border:1px solid #BDBDBD; background:url(/media/img/wall_bg.jpg) repeat-x #CFCFCF; text-align:center;}
+#content-wall .content-left-right .left-column div.wall {width:265px; min-height:660px; overflow:auto; padding:6px; border:1px solid #BDBDBD; background:url(/media/img/wall_bg.jpg) repeat-x #CFCFCF; text-align:center;}
 #content-wall .content-left-right .left-column div.wall span {}
-#content-wall .content-left-right .left-column div.wall span.ct_title {margin:12px 0; display:block}
+#content-wall .content-left-right .left-column div.wall span.ct_title {margin:12px 0; display:block; font-size:22px; }
 
+/*
 #content-wall .content-left-right .left-column div.wall ul#product-title_list {list-style:none; margin-top:25px; text-align:left;}
 #content-wall .content-left-right .left-column div.wall ul#product-title_list li {padding:10px 3px; font-weight:bold;}
 #content-wall .content-left-right .left-column div.wall ul#product-title_list li a {color:#515151; text-decoration:none}
@@ -73,21 +82,34 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .left-column div.wall ul#product-title_list li ul li{padding:4px 10px; font-size:10px;}
 #content-wall .content-left-right .left-column div.wall ul#product-title_list li ul li a {font-size:10px; font-weight:normal}
 #content-wall .content-left-right .left-column div.wall ul#product-title_list li ul li a:hover {text-decoration:underline}
+*/
 
 
-
-#content-wall .content-left-right .right-column{width:640px; float:left; padding:10px;}
-#content-wall .content-left-right .right-column .content {}
+#content-wall .content-left-right .right-column{width:650px; float:left; padding:10px 10px 10px 0;}
+#content-wall .content-left-right .right-column .content {padding:7px;}
 #content-wall .content-left-right .right-column .content .product-titile {width:128px; font-size:10px; font-weight: bold; display:block; margin:8px 0}
+
+/*
 #content-wall .content-left-right .right-column .content table {}
 #content-wall .content-left-right .right-column .content table tr td {padding:3px 15px;}
-/* #content-wall .content-left-right .right-column .content table tr td div {width:280px;} */
+#content-wall .content-left-right .right-column .content table tr td div {width:280px;}
 #content-wall .content-left-right .right-column .content table tr td p {margin-bottom:15px; color:#515151; }
 #content-wall .content-left-right .right-column .content table tr td p.ct_title {color:#293873;}
 #content-wall .content-left-right .right-column .content table tr td img {border:1px solid #CECECE; margin-bottom:15px;}
-#content-wall .content-left-right .right-column .content table#product-photos {/*margin-top:30px;*/}
-#content-wall .content-left-right .right-column .content table#product-photos tr td {padding:8px 7px 0 7px; text-align:center; background:#F6F6F6; border:1px solid #C1BFBF; vertical-align: top;}
-#content-wall .content-left-right .right-column .content table#product-photos tr td img {width:125px; background:#FFF; border:1px solid #C1BFBF; margin:0}
+*/
+
+#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none;}
+
+#content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:1px solid #C1BFBF;  font-weight:bold; color:#FFF; font-size:13px }
+
+#content-wall .content-left-right .right-column .content table#product tbody tr {/*background:#ffdddd*/}
+#content-wall .content-left-right .right-column .content table#product tbody tr td {padding:8px; border-bottom:1px solid #1484C5; vertical-align: middle;}
+#content-wall .content-left-right .right-column .content table#product tbody tr td img {/*width:125px;*/ background:#FFF; border:1px solid #C1BFBF; margin:0}
+#content-wall .content-left-right .right-column .content table#product tbody tr td a{text-decoration:none; font-size:12px; color:#3C4D68}
+
+#content-wall .content-left-right .right-column .content table.pr-detail {border:1px solid #1484C5; border-bottom:none; margin-top:40px;}
+#content-wall .content-left-right .right-column .content table.pr-detail tr {}
+#content-wall .content-left-right .right-column .content table.pr-detail tr th, table.pr-detail tr td {padding:12px; border-bottom:1px solid #1484C5; vertical-align: middle;text-align:left}
 
 
 #content-wall .content-left-right .change-product-img {width:220px; height:170px; text-align:center; background:#F6F6F6; border:1px solid #C1BFBF;}
@@ -131,7 +153,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 
 .bakis { background:url(/media/img/birbakis_bg.png) no-repeat; height:140px; margin:30px 0 0}
-.bakis p.bakis-text {width:380px !important; margin:auto; padding:31px 5px 0 115px; font-size: 11px;}
+.bakis p.bakis-text {width:380px !important; margin:auto; padding:31px 5px 0 115px; font-size: 11.5px;}
 
 .adet-table {margin:auto}
 .adet-table tr td {padding:0 !important}
@@ -145,8 +167,25 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
     font-size: 11px;
     font-weight: bold;
 }
+table.contact-tbl {border:1px solid #1484C5; border-bottom:none; margin:40px;}
+table.contact-tbl tr{}
+table.contact-tbl tr th, table.contact-tbl tr td{padding:12px; border-bottom:1px solid #1484C5; vertical-align: middle;text-align:left}
+
 /* menu */
-ul.root {text-align: left;font-size: 14px;font-weight: bold;}
-ul.children {font-size: 12px;font-weight: normal;}
-ul.root a,ul.root a:link,ul.root a:visited {text-decoration: none;color: #515151;display: block;border-bottom: 1px solid #808080;padding: 5px;}
+ul.root {text-align: left;font-size: 13px;font-weight: bold;}
+ul.root li {margin-bottom:12px; }
+ul.root a,ul.root a:link,ul.root a:visited {text-decoration: none;color: #515151;display: block;padding:6px 5px 5px;}
 ul.root a:hover {background-color: #051733;color: white;}
+
+ul.children {font-size: 11px;font-weight: normal; margin:0 8px; list-style:none;}
+ul.children li {border-bottom: 1px solid #808080; margin:0; padding:4px 10px 4px 2px}
+
+.plugin_picture { text-align:center;}
+.plugin_picture img {
+    width:208px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    padding:4px;
+    margin:6px
+}

@@ -149,7 +149,7 @@ INSTALLED_APPS = (
     'mptt',
     'south',
     'rosetta',
-    'cmsplugin_yandexmap',
+    #'cmsplugin_yandexmap',
 
 
     'cms.plugins.text',
@@ -161,7 +161,7 @@ INSTALLED_APPS = (
     'sekizai',
     'modeltranslation',
     'selectable',
-    'djangojs',
+    #'djangojs',
     'form_designer',
     'form_designer.contrib.cms_plugins.form_designer_form',
 )

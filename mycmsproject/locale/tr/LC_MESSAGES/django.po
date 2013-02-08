@@ -43,6 +43,11 @@ msgid "Product Search Plugin"
 msgstr ""
 
 #: products/templates/products/category_view.html:26
+
+#: products/templates/products/index.html:10
+msgid "Products"
+msgstr "ÜRÜNLER"
+
 #: products/templates/products/index.html:31
 msgid "There are no products."
 msgstr "Herhangi bir ürün mevcut değil"
