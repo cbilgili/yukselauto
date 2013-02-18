@@ -1,6 +1,8 @@
 from django.db import models
 from django.db.models import permalink
 from mptt.models import MPTTModel, TreeForeignKey
+import os
+import uuid
 
 
 
@@ -46,7 +48,12 @@ class Category(MPTTModel):
 
 
 class Product(models.Model):
-    image = models.ImageField(upload_to='products')
+    @staticmethod
+    def generate_new_filename(instance, filename):
+        f, ext = os.path.splitext(filename)
+        return '%s%s' % (uuid.uuid4().hex, ext)
+
+    image = models.ImageField(upload_to=generate_new_filename)
     oem = models.CharField(max_length=250)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)

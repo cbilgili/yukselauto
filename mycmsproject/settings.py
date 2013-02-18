@@ -26,9 +26,27 @@ LANGUAGES = (
 DEFAULT_LANGUAGE = 1
 
 DATABASES = {
-    'default': {
+    'slave': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(PROJECT_DIR, 'mycms.db'),
+    },
+     "default": {
+        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        "ENGINE": "django.db.backends.mysql",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "yukseldjango",
+        # Not used with sqlite3.
+        "USER": "root",
+        # Not used with sqlite3.
+        "PASSWORD": "1q2w3e",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "",
+        'STORAGE_ENGINE': 'MyISAM',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        },
     }
 }
 
