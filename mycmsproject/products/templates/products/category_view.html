@@ -20,15 +20,16 @@
         <table  id="product" width="640" align="center" cellspacing="0" cellpadding="0">
             <thead>
             <tr>
-                <td width="100">{% trans "Image" %}</td>
-                <td>{% trans "Brand" %}</td>
-                <td>{% trans "Name" %}</td>
-                <td width="170" align="right">{% trans "OEM Numbers" %}</td>
+                <td width="120">{% trans "Yüksel No" %}</td>
+                <td>{% trans "Image" %}</td>
+                <td width="170">{% trans "OEM Numbers" %}</td>
+                <td>{% trans "Description" %}</td>
             </tr>
             </thead>
             <tbody>
             {% for product in products %}
                 <tr style="cursor: pointer;" onmouseover="this.bgColor='#F7F7F7'" onmouseout="this.bgColor='#FEFEFE'">
+                    <td><a href="{{ product.get_absolute_url }}">###</a></td>
                     <td>
                         <div class="imageRow">
                             <div class="single">
@@ -36,9 +37,8 @@
                             </div>
                         </div>
                     </td>
-                    <td><a href="{{ product.get_absolute_url }}">{{ product.category }}</a></td>
-                    <td><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></td>
-                    <td align="right"><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.description }}</a></td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -47,10 +47,10 @@
         <table id="product" width="640" align="center" cellspacing="0" cellpadding="0">
             <thead>
             <tr>
-                <td width="100">{% trans "Image" %}</td>
-                <td>{% trans "Brand" %}</td>
-                <td>{% trans "Name" %}</td>
-                <td width="170" align="right">{% trans "OEM Numbers" %}</td>
+                <td width="120">{% trans "Yüksel No" %}</td>
+                <td>{% trans "Image" %}</td>
+                <td width="170">{% trans "OEM Numbers" %}</td>
+                <td>{% trans "Description" %}</td>
             </tr>
             </thead>
             <tbody>

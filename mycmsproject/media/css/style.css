@@ -109,7 +109,11 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #content-wall .content-left-right .right-column .content table.pr-detail {border:1px solid #1484C5; border-bottom:none; margin-top:40px;}
 #content-wall .content-left-right .right-column .content table.pr-detail tr {}
-#content-wall .content-left-right .right-column .content table.pr-detail tr th, table.pr-detail tr td {padding:12px; border-bottom:1px solid #1484C5; vertical-align: middle;text-align:left}
+#content-wall .content-left-right .right-column .content table.pr-detail tr td {border-right:1px solid #1484C5;}
+#content-wall .content-left-right .right-column .content table.pr-detail tr td.last {border-right:none;}
+#content-wall .content-left-right .right-column .content table.pr-detail tr th.images {border-right:1px solid #1484C5;}
+#content-wall .content-left-right .right-column .content table.pr-detail tr th.description, #content-wall .content-left-right .right-column .content table.pr-detail tr td.description {vertical-align:top;}
+#content-wall .content-left-right .right-column .content table.pr-detail tr th, table.pr-detail tr td {padding:8px; border-bottom:1px solid #1484C5; vertical-align: middle;text-align:left}
 
 
 #content-wall .content-left-right .change-product-img {width:220px; height:170px; text-align:center; background:#F6F6F6; border:1px solid #C1BFBF;}

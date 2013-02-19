@@ -2,7 +2,8 @@
 
 /* line 318, ../sass/screen.sass */
 .imageRow {
-
+width:191px;
+margin:auto;
 }
 /* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .imageRow:after {
