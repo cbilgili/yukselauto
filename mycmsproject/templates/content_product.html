@@ -6,11 +6,11 @@
     <div id="content-wall">
         <div class="content-left-right">
             <div class="left-column">
-                {% placeholder left_search_box or%}
+                {% block solsearch %}{% endblock %}{% block solmenu %}
                     <div class="wall">
                     {% block prodoct_left %}{% endblock %}
-                    </div>{% endplaceholder %}
-
+                    </div>
+                    {% endblock %}
                 <!--  <div class="change-product-img"><?php include 'change_product_img.php'; ?></div> -->
             </div>
             <div class="right-column">
