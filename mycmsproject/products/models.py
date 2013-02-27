@@ -72,7 +72,7 @@ class Product(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return 'view_product_entry', None, { 'slug': self.slug }
+        return 'view_product_entry', None, { 'product_type': self.category.product_type.slug, 'slug': self.slug  }
 
 
 

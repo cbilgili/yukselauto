@@ -12,7 +12,7 @@ urlpatterns = patterns('',
         'products.views.view_category',
         name='view_category_entry'),
     url(
-        r'^(?P<slug>[^\.]+).html',
+        r'^(?P<product_type>[^\/]+)/(?P<slug>[^\.]+).html',
         'products.views.view_product',
         name='view_product_entry'),
     # Process a category

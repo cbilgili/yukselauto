@@ -6,14 +6,21 @@ from django.shortcuts import render_to_response, get_object_or_404, get_list_or_
 
 def index(request):
 
+    if is_import_category(request):
+        product_type = product_type_obj = ProductType.objects.get(pk=1)
+        products = Product.objects.filter(category__product_type=product_type)[:15]
+    else:
+        product_type = product_type_obj = ProductType.objects.get(pk=2)
+        products = Product.objects.filter(category__product_type=product_type)[:15]
+
 
     return render_to_response('products/index.html', {
-        'products': Product.objects.all()[:15],
+        'products': products,
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))
 
 #
-def view_product(request, slug):
+def view_product(request, product_type, slug):
     return render_to_response('products/product_view.html', {
         'product': get_object_or_404(Product, slug=slug),
         'category_all': get_category_all(request)
@@ -30,11 +37,13 @@ def view_category(request, category_id, parentslug, slug, product_type):
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))
 
+def is_import_category(request):
+    return request.path.find('import') > 0
 
 def get_category_all(request):
     """Bu methodla ürünlerin türüne göre sol menü için kategori verisi çekilir"""
-    page_id = request.current_page.reverse_id
-    if page_id == 'ithal_urunler':
+    #page_id = request.current_page.reverse_id
+    if is_import_category(request):
         product_type_obj = ProductType.objects.get(pk=1)
     else:
         product_type_obj = ProductType.objects.get(pk=2)
