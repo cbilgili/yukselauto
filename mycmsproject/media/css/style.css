@@ -27,11 +27,11 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #header-wall .header p.header-img{text-align:right; float:right}
 
 #menu-wall {clear:both; background:url(/media/img/menu-bg.png) repeat-x #1B2940;}
-#menu-wall .menu {margin:auto; text-align:center; padding:11px 0 12px;}
-#menu-wall .menu ul {list-style:none outside none;}
-#menu-wall .menu ul li {display:inline; height:48px;}
-#menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
-#menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;}
+#menu-wall .menu {margin:auto; text-align:center; /* padding:11px 0 12px; */}
+#menu-wall .menu ul {list-style:none outside none; padding:11px 0 12px;}
+#menu-wall .menu ul li {display:inline; /* height:48px; */}
+/* #menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
+#menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;} */
 #menu-wall .menu ul li a {color:#FFF; font-size:13px; font-weight: bold; padding:11px 10px 12px 10px; text-decoration: none;}
 #menu-wall .menu ul li a:hover {background:url(/media/img/transparent.png) repeat; color:#1B2940}
 
@@ -156,8 +156,9 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #footer-end-wall #end-wall .design .designby a:hover {text-decoration:underline}
 
 
-.bakis { background:url(/media/img/birbakis_bg.png) no-repeat; height:140px; margin:30px 0 0}
+.bakis { background:url(/media/img/birbakis_bg.png) no-repeat; height:140px; width:602px; margin:30px 0 0}
 .bakis p.bakis-text {width:380px !important; margin:auto; padding:31px 5px 0 115px; font-size: 11.5px;}
+.bakis p.bakis-text span {width:380px;}
 
 .adet-table {margin:auto}
 .adet-table tr td {padding:0 !important}
@@ -193,3 +194,22 @@ ul.children li {border-bottom: 1px solid #808080; margin:0; padding:4px 10px 4px
     padding:4px;
     margin:6px
 }
+
+    .product-demand {text-align:center}
+    .product-demand div.logo {padding:0 0 30px}
+    .product-demand div.logo span.plugin_picture img {border:none; border-radius:none; float: none; margin:0; width:375px;}
+    .product-demand form {width:796px; margin:auto}
+    .product-demand div.tarih { text-align:right}
+    .product-demand table {border-width:2px 1px 1px 2px; border-style:solid; border-color:#444; margin-top:25px;}
+    .product-demand table tr {}
+    .product-demand table tr th {border-right: 1px solid #444; border-bottom: 2px solid #444; padding:12px 5px;}
+    .product-demand table tr th.ilk {width:30px}
+    .product-demand table tr td {border-right: 1px solid #444; border-bottom: 1px solid #444; padding:4px; text-align:center}
+    .product-demand table tr td input.text {padding:19px 3px 20px; border:none; } 
+    .product-demand table tr td textarea {border:none}
+
+
+table.product-details {border-width:2px 1px 1px 2px; border-style:solid; border-color:#005CA1;}
+table.product-details tr th {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; height:16px;  }
+table.product-details tr td {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; }
+table.product-details tr td .imageRow {width:132px; margin:auto;}

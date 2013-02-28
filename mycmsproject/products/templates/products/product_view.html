@@ -10,16 +10,27 @@
     <h2>{{ product.title }}</h2>
     <table class="product-details" width="640" cellspacing="0" cellpadding="0">
         <tr>
+<<<<<<< HEAD
             <th align="left" width="135">{% trans "Yüksel No" %}</th>
             <td>{{ product.yuksel_no }}</td>
             <td colspan="2" align="right">{{ product.created }}</td>
         </tr>
         <tr>
             <td rowspan="2">
+=======
+            <th align="left" width="135">{% trans "Yüksel No" %} : {{ product.yuksel_no }}</th>
+            <th width="135">{% trans "OEM Numbers" %}</th>
+            <th width="145">{% trans "Type" %} / {% trans "Model" %}</th>
+            <th width="145">{% trans "Engine" %}</th>
+        </tr>
+        <tr>
+            <td>
+>>>>>>> UPDATE
                 <div class="imageRow">
                     <div class="single"><a rel="lightbox" href="{{MEDIA_URL}}{{ product.image }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="" width="115"/></a></div>
                 </div>
             </td>
+<<<<<<< HEAD
             <th width="135">{% trans "OEM Numbers" %}</th>
             <th width="145">{% trans "Type" %} / {% trans "Model" %}</th>
             <th width="145">{% trans "Engine" %}</th>
@@ -30,6 +41,13 @@
             <td align="center">{{ product.engine }}</td>
         </tr>
         <tr>
+=======
+            <td align="center">{{ product.oem }}</td>
+            <td align="center">{{ product.type }}</td>
+            <td align="center">{{ product.engine }}</td>
+        </tr>
+        <tr>
+>>>>>>> UPDATE
             <td align="center">{{ product.description }}</td>
             <td colspan="3">&nbsp;</td>
         </tr>
