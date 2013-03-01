@@ -98,7 +98,8 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .right-column .content table tr td img {border:1px solid #CECECE; margin-bottom:15px;}
 */
 
-#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none;}
+#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; text-align:center;}
+#content-wall .content-left-right .right-column .content table#product .imageRow {width:116px}
 
 #content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:1px solid #C1BFBF;  font-weight:bold; color:#FFF; font-size:13px }
 

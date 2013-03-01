@@ -61,6 +61,7 @@ class Product(models.Model):
     engine = models.CharField(max_length=200)
     type = models.CharField(max_length=200)
     description = models.TextField()
+    detail = models.TextField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)
     meta_keywords = models.CharField(max_length=200, null=True)
     meta_description = models.CharField(max_length=200, null=True)
