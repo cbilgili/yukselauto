@@ -30,19 +30,11 @@ DATABASES = {
             # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
             "ENGINE": "django.db.backends.mysql",
             # DB name or path to database file if using sqlite3.
-<<<<<<< HEAD
-            "NAME": "yuksel2_db",
-            # Not used with sqlite3.
-            "USER": "yuksel2_user",
-            # Not used with sqlite3.
-            "PASSWORD": "123456",
-=======
             "NAME": "yukseldjango",
             # Not used with sqlite3.
             "USER": "root",
             # Not used with sqlite3.
             "PASSWORD": "1q2w3e",
->>>>>>> Yüksel Model ve Style Güncellemeleri
             # Set to empty string for localhost. Not used with sqlite3.
             "HOST": "",
             # Set to empty string for default. Not used with sqlite3.
