@@ -25,8 +25,8 @@ class Category(MPTTModel):
     product_type = models.ForeignKey(ProductType, null=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
     position = models.PositiveSmallIntegerField("Position", default=0)
-    meta_keywords = models.TextField(max_length=200, null=True)
-    meta_description = models.CharField(max_length=200, null=True)
+    meta_keywords = models.TextField(max_length=200, null=True, blank=True)
+    meta_description = models.CharField(max_length=200, null=True, blank=True)
 
 
     class Meta:
@@ -60,11 +60,16 @@ class Product(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     engine = models.CharField(max_length=200)
     type = models.CharField(max_length=200)
+<<<<<<< HEAD
     description = models.TextField()
     detail = models.TextField()
+=======
+    description = models.TextField(blank=True)
+    detail = models.TextField(blank=True)
+>>>>>>> Yüksel Model ve Style Güncellemeleri
     created = models.DateTimeField(db_index=True, auto_now_add=True)
-    meta_keywords = models.CharField(max_length=200, null=True)
-    meta_description = models.CharField(max_length=200, null=True)
+    meta_keywords = models.CharField(max_length=200, null=True, blank=True)
+    meta_description = models.CharField(max_length=200, null=True, blank=True)
 
     category = models.ForeignKey(Category, null=True)
 
