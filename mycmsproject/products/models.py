@@ -3,6 +3,7 @@ from django.db.models import permalink
 from mptt.models import MPTTModel, TreeForeignKey
 import os
 import uuid
+from tinymce.models import HTMLField
 
 
 
@@ -60,8 +61,8 @@ class Product(models.Model):
     slug = models.SlugField(max_length=100)
     engine = models.TextField(blank=True)
     type = models.TextField(blank=True)
-    description = models.TextField(blank=True)
-    detail = models.TextField(blank=True)
+    description = HTMLField()
+    detail = HTMLField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)
     meta_keywords = models.CharField(max_length=200, null=True, blank=True)
     meta_description = models.CharField(max_length=200, null=True, blank=True)

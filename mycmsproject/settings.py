@@ -160,6 +160,7 @@ INSTALLED_APPS = (
     'south',
     'rosetta',
     #'cmsplugin_yandexmap',
+    'tinymce',
 
 
     'cms.plugins.text',

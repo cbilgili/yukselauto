@@ -17,4 +17,5 @@ if settings.DEBUG:
         url(r'^rosetta/', include('rosetta.urls')),
         (r'^selectable/', include('selectable.urls')),
         (r'^forms/', include('form_designer.urls')),
+        (r'^tinymce/', include('tinymce.urls')),
     ) + urlpatterns

@@ -4,11 +4,13 @@ from models import ProductType, Category, Product
 class ProductTypeTranslationOptions(TranslationOptions):
     fields = ('name',)
 
+
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name','meta_keywords','meta_description')
+    fields = ('name', 'meta_keywords', 'meta_description')
+
 
 class ProductTranslationOptions(TranslationOptions):
-    fields = ('meta_keywords','meta_description',)
+    fields = ('meta_keywords', 'meta_description', 'description', 'detail', 'engine', 'type')
 
 translator.register(ProductType, ProductTypeTranslationOptions)
 translator.register(Category, CategoryTranslationOptions)

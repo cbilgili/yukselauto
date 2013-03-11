@@ -26,8 +26,8 @@
             <td align="center">{{ product.engine|linebreaksbr }}</td>
         </tr>
         <tr>
-            <td align="center">{{ product.detail|linebreaksbr }}&nbsp;</td>
-            <td colspan="3">{{ product.description|linebreaksbr }}</td>
+            <!--<td align="center">{{ product.detail|safe }}&nbsp;</td>-->
+            <td colspan="4">{{ product.detail|safe }}</td>
         </tr>
     </table>
 {% endblock %}

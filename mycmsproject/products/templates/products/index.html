@@ -29,8 +29,8 @@
                             </div>
                         </div>
                     </td>
-                    <td><a href="{{ product.get_absolute_url }}">{{ product.oem }}</a></td>
-                    <td><a href="{{ product.get_absolute_url }}">{{ product.description }}</a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.oem|linebreaksbr }}</a></td>
+                    <td><a href="{{ product.get_absolute_url }}">{{ product.description|safe }}</a></td>
                 </tr>
             {% endfor %}
             </tbody>
