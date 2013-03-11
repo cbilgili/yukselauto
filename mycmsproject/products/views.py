@@ -3,6 +3,8 @@
 from django.template import RequestContext
 from products.models import Product, Category, ProductType
 from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.core.mail import send_mail, EmailMessage
 
 def index(request):
 
@@ -20,9 +22,9 @@ def index(request):
     }, context_instance=RequestContext(request))
 
 #
-def view_product(request, product_type, slug):
+def view_product(request, product_type, product_id, slug):
     return render_to_response('products/product_view.html', {
-        'product': get_object_or_404(Product, slug=slug),
+        'product': get_object_or_404(Product, pk=product_id),
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))
 
@@ -33,7 +35,7 @@ def view_category(request, category_id, parentslug, slug, product_type):
 
     return render_to_response('products/category_view.html', {
         'products': category.product_set.all(),
-        'category': get_object_or_404(Category, slug=slug),
+        'category': get_object_or_404(Category, pk=category_id),
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))
 
@@ -74,8 +76,20 @@ def search_product(request):
         'products': results,
         'term' : oem_query
     }, context_instance=RequestContext(request))
-
-
+@csrf_exempt
+def send_form(request):
+    a = '<html><body><table>'
+    for key, value in request.POST.iteritems():
+        a+= '<tr><td><strong>'+key+'</strong></td><td>'+value+'</td></tr>'
+    a += '</table></body></html>'
+    send_mail('Yüksel Oto Form', a, 'mail@yuksel2.bigagora.com',
+        ['cbilgili@gmail.com'], fail_silently=False)
+    subject, from_email, to = 'Yüksel Oto Form', 'mail@yuksel2.bigagora.com', 'cbilgili@gmail.com'
+    html_content = a
+    msg = EmailMessage(subject, html_content, from_email, [to])
+    msg.content_subtype = "html"  # Main content is now text/html
+    msg.send()
+    return render_to_response('products/send_form.html', {'form':a}, context_instance=RequestContext(request))
 
 
 

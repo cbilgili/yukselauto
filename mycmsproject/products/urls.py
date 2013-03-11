@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import patterns, url
 
 from products import views
-from products.views import search_sub_category, search_product
+from products.views import search_sub_category, search_product, send_form
 
 
 urlpatterns = patterns('',
@@ -12,7 +12,7 @@ urlpatterns = patterns('',
         'products.views.view_category',
         name='view_category_entry'),
     url(
-        r'^(?P<product_type>[^\/]+)/(?P<slug>[^\.]+).html',
+        r'^(?P<product_type>[^\/]+)/(?P<product_id>\d+)/(?P<slug>[^\.]+).html',
         'products.views.view_product',
         name='view_product_entry'),
     # Process a category
@@ -21,6 +21,8 @@ urlpatterns = patterns('',
         name='search_sub_category'),
     url(r'^search/$',
         search_product),
+    url(r'^send_form/$',
+        send_form),
 
     # ex: /polls/5/
     #url(r'^(?P<poll_id>\d+)/$', views.detail, name='detail'),

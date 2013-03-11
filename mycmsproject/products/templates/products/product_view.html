@@ -21,13 +21,13 @@
                     <div class="single"><a rel="lightbox" href="{{MEDIA_URL}}{{ product.image }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="" width="115"/></a></div>
                 </div>
             </td>
-            <td align="center">{{ product.oem }}</td>
-            <td align="center">{{ product.type }}</td>
-            <td align="center">{{ product.engine }}</td>
+            <td align="center">{{ product.oem|linebreaksbr }}</td>
+            <td align="center">{{ product.type|linebreaksbr }}</td>
+            <td align="center">{{ product.engine|linebreaksbr }}</td>
         </tr>
         <tr>
-            <td align="center">{{ product.detail }}&nbsp;</td>
-            <td colspan="3">{{ product.description }}</td>
+            <td align="center">{{ product.detail|linebreaksbr }}&nbsp;</td>
+            <td colspan="3">{{ product.description|linebreaksbr }}</td>
         </tr>
     </table>
 {% endblock %}

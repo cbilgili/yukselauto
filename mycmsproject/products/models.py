@@ -21,7 +21,7 @@ class ProductType(models.Model):
 
 class Category(MPTTModel):
     name = models.CharField(max_length=150)
-    slug = models.SlugField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100)
     product_type = models.ForeignKey(ProductType, null=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
     position = models.PositiveSmallIntegerField("Position", default=0)
@@ -54,12 +54,12 @@ class Product(models.Model):
         return '%s%s' % (uuid.uuid4().hex, ext)
 
     image = models.ImageField(upload_to=generate_new_filename)
-    oem = models.CharField(max_length=250)
+    oem = models.TextField(blank=True)
     yuksel_no = models.CharField(max_length=250)
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=100, unique=True)
-    engine = models.CharField(max_length=200)
-    type = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=100)
+    engine = models.TextField(blank=True)
+    type = models.TextField(blank=True)
     description = models.TextField(blank=True)
     detail = models.TextField(blank=True)
     created = models.DateTimeField(db_index=True, auto_now_add=True)
@@ -73,7 +73,7 @@ class Product(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return 'view_product_entry', None, { 'product_type': self.category.product_type.slug, 'slug': self.slug  }
+        return 'view_product_entry', None, { 'product_type': self.category.product_type.slug, 'slug': self.slug, 'product_id': self.id  }
 
 
 

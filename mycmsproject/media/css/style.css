@@ -205,7 +205,7 @@ ul.children li {border-bottom: 1px solid #808080; margin:0; padding:4px 10px 4px
     .product-demand table tr {}
     .product-demand table tr th {border-right: 1px solid #444; border-bottom: 2px solid #444; padding:12px 5px;}
     .product-demand table tr th.ilk {width:30px}
-    .product-demand table tr td {border-right: 1px solid #444; border-bottom: 1px solid #444; padding:4px; text-align:center}
+    .product-demand table tr td {border-right: 1px solid #444; border-bottom: 1px solid #444; text-align:center}
     .product-demand table tr td input.text {padding:19px 3px 20px; border:none; } 
     .product-demand table tr td textarea {border:none}
 

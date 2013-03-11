@@ -172,8 +172,8 @@ INSTALLED_APPS = (
     'modeltranslation',
     'selectable',
     #'djangojs',
-    #'form_designer',
-    #'form_designer.contrib.cms_plugins.form_designer_form',
+    'form_designer',
+    'form_designer.contrib.cms_plugins.form_designer_form',
 )
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'tr'
