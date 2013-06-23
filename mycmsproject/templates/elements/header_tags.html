@@ -3,5 +3,28 @@
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/screen.css"/>
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/lightbox.css"/>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.cookie.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/script.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/lightbox.js"></script>
+<script>
+    $(document).ready(function () {
+        var checkCookie = $.cookie("nav-item");
+        console.log('first cookie', $.cookie("nav-item"));
+        if (checkCookie != "") {
+            $('#nav > li > a:eq('+checkCookie+')').addClass('active').next().show();
+        }
+        $('#nav > li > a').click(function(){
+            var navIndex = $('#nav > li > a').index(this);
+            $.cookie("nav-item", navIndex);
+            console.log('set cookie:',navIndex);
+            $('#nav li ul').slideUp();
+            if ($(this).next().is(":visible")){
+                $(this).next().slideUp();
+            } else {
+                $(this).next().slideToggle();
+            }
+            $('#nav li a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>

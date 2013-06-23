@@ -179,7 +179,7 @@ table.contact-tbl tr th, table.contact-tbl tr td{padding:12px; border-bottom:1px
 
 /* menu */
 ul.root {text-align: left;font-size: 13px;font-weight: bold;}
-ul.root li {margin-bottom:12px; }
+ul.root li {margin-bottom:12px; border-bottom: 1px solid #808080}
 ul.root a,ul.root a:link,ul.root a:visited {text-decoration: none;color: #515151;display: block;padding:6px 5px 5px;}
 ul.root a:hover {background-color: #051733;color: white;}
 
@@ -214,3 +214,6 @@ table.product-details {border-width:2px 1px 1px 2px; border-style:solid; border-
 table.product-details tr th {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; height:16px;  }
 table.product-details tr td {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; }
 table.product-details tr td .imageRow {width:132px; margin:auto;}
+
+
+#nav li ul {display: none;}

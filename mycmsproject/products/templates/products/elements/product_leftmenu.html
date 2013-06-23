@@ -4,9 +4,14 @@
 
 </td>
 
-<ul class="root">
+<ul class="root" id="nav">
     {% recursetree category_all %}
-        <li><a href="{{ node.get_absolute_url }}">{{ node.name }}</a>{% if not node.is_leaf_node %}
+        {% if not node.is_leaf_node %}
+            <li><a href="javascript:void(0)">{{ node.name }}</a>
+        {% else %}
+            <li><a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+        {% endif %}
+        {% if not node.is_leaf_node %}
             <ul class="children">
                 {{ children }}
             </ul>

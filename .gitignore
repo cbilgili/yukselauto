@@ -4,5 +4,4 @@
 local_settings.py
 .DS_Store
 .idea
-media/*
-mycmsproject/media/*
+mycmsproject/media/<staticmethod*
