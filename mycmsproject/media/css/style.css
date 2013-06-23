@@ -46,8 +46,8 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-table tr td {vertical-align:top; width:320px; padding:10px 20px;}
 #content-wall .content-table tr td p {width:280px; margin-top:12px}
 
-#content-wall .change-product-img {width:232px; text-align:center; margin:15px auto; background:#F6F6F6; border:1px solid #C1BFBF; padding: 14px 0;}
-#content-wall .change-product-img img { background:#FFF; border:1px solid #C1BFBF; padding:12px 0; }
+#content-wall .change-product-img {text-align:center;}
+#content-wall .change-product-img img { background:#FFF; padding:12px 0; }
 
 #content-wall .form-icerik-arama {width:280px; height:354px; padding:6px;}
 #content-wall .form-icerik-arama tr td {vertical-align:middle; padding:6px 0 0;}

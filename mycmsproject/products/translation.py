@@ -6,7 +6,7 @@ class ProductTypeTranslationOptions(TranslationOptions):
 
 
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name', 'meta_keywords', 'meta_description')
+    fields = ('name', 'meta_keywords', 'meta_description', 'header1_name', 'header2_name', 'header3_name', 'header4_name')
 
 
 class ProductTranslationOptions(TranslationOptions):

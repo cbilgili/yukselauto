@@ -7,32 +7,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-05 16:44+0200\n"
-"PO-Revision-Date: 2013-02-01 05:52\n"
-"Last-Translator:   <cbilgili@gmail.com>\n"
+"POT-Creation-Date: 2013-06-23 16:02+0300\n"
+"PO-Revision-Date: 2013-06-23 16:03+0200\n"
+"Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.6.8\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#: settings.py:21 settings.py:116
+#: settings.py:21 settings.py:126
 msgid "English"
 msgstr "İngilizce"
 
-#: settings.py:22 settings.py:117
+#: settings.py:22 settings.py:127
 msgid "Turkish"
 msgstr "Türkçe"
 
-#: settings.py:23 settings.py:118
+#: settings.py:23 settings.py:128
 msgid "German"
 msgstr "Almanca"
 
 #: guest/cms_plugins.py:10
 msgid "Hello Plugin"
-msgstr ""
+msgstr "Hello Plugin"
 
 #: products/cms_app.py:6
 msgid "Product App"
@@ -40,45 +40,103 @@ msgstr "Product App"
 
 #: products/cms_plugins.py:12
 msgid "Product Search Plugin"
-msgstr ""
+msgstr "Ürün Arama Eklentisi"
 
-#: products/templates/products/category_view.html:26
-
-#: products/templates/products/index.html:10
-msgid "Products"
-msgstr "ÜRÜNLER"
-
-#: products/templates/products/index.html:31
-msgid "There are no products."
-msgstr "Herhangi bir ürün mevcut değil"
-
+#: products/templates/products/category_view.html:23
+#: products/templates/products/category_view.html:50
 #: products/templates/products/index.html:15
+#: products/templates/products/index.html:42
+#: products/templates/products/product_view.html:13
+#: products_sec/templates/products/category_view.html:23
+#: products_sec/templates/products/category_view.html:50
+#: products_sec/templates/products/product_view.html:16
+msgid "Yüksel No"
+msgstr "Yüksel No"
+
+#: products/templates/products/category_view.html:24
+#: products/templates/products/category_view.html:51
+#: products/templates/products/index.html:16
+#: products/templates/products/index.html:43
+#: products_sec/templates/products/category_view.html:24
+#: products_sec/templates/products/category_view.html:51
+#: products_sec/templates/products/index.html:15
+#: products_sec/templates/products/index.html:42
 msgid "Image"
 msgstr "Resim"
 
-#: products/templates/products/index.html:16
-msgid "Name"
-msgstr "İsim"
+#: products/templates/products/category_view.html:25
+#: products/templates/products/category_view.html:52
+#: products/templates/products/index.html:17
+#: products/templates/products/index.html:44
+#: products/templates/products/product_view.html:14
+#: products_sec/templates/products/category_view.html:25
+#: products_sec/templates/products/category_view.html:52
+#: products_sec/templates/products/index.html:18
+#: products_sec/templates/products/index.html:45
+#: products_sec/templates/products/product_view.html:19
+msgid "OEM Numbers"
+msgstr "OEM Numarası"
 
-#: products/templates/products/product_view.html:11
-msgid "Engine"
-msgstr "Motor"
+#: products/templates/products/category_view.html:26
+#: products/templates/products/category_view.html:53
+#: products/templates/products/index.html:18
+#: products/templates/products/index.html:45
+#: products_sec/templates/products/category_view.html:26
+#: products_sec/templates/products/category_view.html:53
+#: products_sec/templates/products/product_view.html:35
+msgid "Description"
+msgstr "Açıklama"
 
-#: products/templates/products/product_view.html:12
+#: products/templates/products/category_view.html:58
+#: products/templates/products/index.html:50
+#: products_sec/templates/products/category_view.html:58
+#: products_sec/templates/products/index.html:50
+msgid "There are no products."
+msgstr "Herhangi bir ürün mevcut değil"
+
+#: products/templates/products/index.html:10
+#: products_sec/templates/products/index.html:10
+msgid "PRODUCTS"
+msgstr "ÜRÜNLER"
+
+#: products/templates/products/product_view.html:15
+#: products_sec/templates/products/product_view.html:22
 msgid "Type"
 msgstr "Tip"
 
-#: products/templates/products/product_view.html:13
-msgid "Details"
-msgstr "Ayrıntılar"
+#: products/templates/products/product_view.html:15
+#: products_sec/templates/products/product_view.html:22
+msgid "Model"
+msgstr "Model"
 
-#: products/templates/products/search_results.html:4
-msgid "Return to search"
-msgstr "Aramaya geri dön"
+#: products/templates/products/product_view.html:16
+#: products_sec/templates/products/product_view.html:25
+msgid "Engine"
+msgstr "Motor"
 
-#: products/templates/products/search_results.html:8
+#: products/templates/products/search_results.html:9
+#: products_sec/templates/products/search_results.html:9
 msgid "Search results"
 msgstr "Arama sonuçları"
+
+#: products/templates/products/send_form.html:9
+msgid "Thank you"
+msgstr "Teşekkürler"
+
+#: products_sec/cms_app.py:6
+msgid "Product Sec App"
+msgstr "Product Sec App"
+
+#: products_sec/templates/products/index.html:16
+#: products_sec/templates/products/index.html:43
+#: templates/search_plugin.html:36
+msgid "Brand"
+msgstr "Marka"
+
+#: products_sec/templates/products/index.html:17
+#: products_sec/templates/products/index.html:44
+msgid "Name"
+msgstr "İsim"
 
 #: templates/content_home.html:22
 msgid "NEWS FROM YUKSEL AUTOMATIVE"
@@ -104,10 +162,15 @@ msgstr "Kategori"
 msgid "Please Choose"
 msgstr "Lütfen Seçiniz"
 
-#: templates/search_plugin.html:36
-msgid "Brand"
-msgstr "Marka"
-
 #: templates/search_plugin.html:40
 msgid "^-- Please Choose Category"
 msgstr "^-- Lütfen Yukarıdan Seçiniz"
+
+#~ msgid "Products"
+#~ msgstr "ÜRÜNLER"
+
+#~ msgid "Details"
+#~ msgstr "Ayrıntılar"
+
+#~ msgid "Return to search"
+#~ msgstr "Aramaya geri dön"

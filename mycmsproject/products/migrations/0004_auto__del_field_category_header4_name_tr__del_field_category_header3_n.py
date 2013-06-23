@@ -8,90 +8,143 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'ProductType'
-        db.create_table('products_producttype', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=50, null=True)),
-            ('name_en', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('name_tr', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('name_de', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=100)),
-        ))
-        db.send_create_signal('products', ['ProductType'])
+        # Deleting field 'Category.header4_name_tr'
+        db.delete_column('products_category', 'header4_name_tr')
 
-        # Adding model 'Category'
-        db.create_table('products_category', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=150)),
-            ('name_en', self.gf('django.db.models.fields.CharField')(max_length=150, null=True, blank=True)),
-            ('name_tr', self.gf('django.db.models.fields.CharField')(max_length=150, null=True, blank=True)),
-            ('name_de', self.gf('django.db.models.fields.CharField')(max_length=150, null=True, blank=True)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=100)),
-            ('product_type', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['products.ProductType'], null=True)),
-            ('parent', self.gf('mptt.fields.TreeForeignKey')(blank=True, related_name='children', null=True, to=orm['products.Category'])),
-            ('position', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=0)),
-            ('meta_keywords', self.gf('django.db.models.fields.TextField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_en', self.gf('django.db.models.fields.TextField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_tr', self.gf('django.db.models.fields.TextField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_de', self.gf('django.db.models.fields.TextField')(max_length=200, null=True, blank=True)),
-            ('meta_description', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_en', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_tr', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_de', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('lft', self.gf('django.db.models.fields.PositiveIntegerField')(db_index=True)),
-            ('rght', self.gf('django.db.models.fields.PositiveIntegerField')(db_index=True)),
-            ('tree_id', self.gf('django.db.models.fields.PositiveIntegerField')(db_index=True)),
-            ('level', self.gf('django.db.models.fields.PositiveIntegerField')(db_index=True)),
-        ))
-        db.send_create_signal('products', ['Category'])
+        # Deleting field 'Category.header3_name_tr'
+        db.delete_column('products_category', 'header3_name_tr')
 
-        # Adding model 'Product'
-        db.create_table('products_product', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('image', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('oem', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('yuksel_no', self.gf('django.db.models.fields.CharField')(max_length=250)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=200)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=100)),
-            ('engine', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('engine_en', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('engine_tr', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('engine_de', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('type', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('type_en', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('type_tr', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('type_de', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('description', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('description_en', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('description_tr', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('description_de', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('detail', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('detail_en', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('detail_tr', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('detail_de', self.gf('tinymce.models.HTMLField')(null=True, blank=True)),
-            ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, db_index=True, blank=True)),
-            ('meta_keywords', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_en', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_tr', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_keywords_de', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_en', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_tr', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('meta_description_de', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
-            ('category', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['products.Category'], null=True)),
-        ))
-        db.send_create_signal('products', ['Product'])
+        # Deleting field 'Category.header2_name'
+        db.delete_column('products_category', 'header2_name')
+
+        # Deleting field 'Category.show_image'
+        db.delete_column('products_category', 'show_image')
+
+        # Deleting field 'Category.header3_name'
+        db.delete_column('products_category', 'header3_name')
+
+        # Deleting field 'Category.header1_name_tr'
+        db.delete_column('products_category', 'header1_name_tr')
+
+        # Deleting field 'Category.header4_name'
+        db.delete_column('products_category', 'header4_name')
+
+        # Deleting field 'Category.header1_name'
+        db.delete_column('products_category', 'header1_name')
+
+        # Deleting field 'Category.header2_name_tr'
+        db.delete_column('products_category', 'header2_name_tr')
+
+        # Deleting field 'Category.header3_name_de'
+        db.delete_column('products_category', 'header3_name_de')
+
+        # Deleting field 'Category.header4_name_de'
+        db.delete_column('products_category', 'header4_name_de')
+
+        # Deleting field 'Category.header3_name_en'
+        db.delete_column('products_category', 'header3_name_en')
+
+        # Deleting field 'Category.header4_name_en'
+        db.delete_column('products_category', 'header4_name_en')
+
+        # Deleting field 'Category.header1_name_de'
+        db.delete_column('products_category', 'header1_name_de')
+
+        # Deleting field 'Category.header1_name_en'
+        db.delete_column('products_category', 'header1_name_en')
+
+        # Deleting field 'Category.header2_name_en'
+        db.delete_column('products_category', 'header2_name_en')
+
+        # Deleting field 'Category.header2_name_de'
+        db.delete_column('products_category', 'header2_name_de')
 
 
     def backwards(self, orm):
-        # Deleting model 'ProductType'
-        db.delete_table('products_producttype')
+        # Adding field 'Category.header4_name_tr'
+        db.add_column('products_category', 'header4_name_tr',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
 
-        # Deleting model 'Category'
-        db.delete_table('products_category')
+        # Adding field 'Category.header3_name_tr'
+        db.add_column('products_category', 'header3_name_tr',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
 
-        # Deleting model 'Product'
-        db.delete_table('products_product')
+        # Adding field 'Category.header2_name'
+        db.add_column('products_category', 'header2_name',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.show_image'
+        db.add_column('products_category', 'show_image',
+                      self.gf('django.db.models.fields.BooleanField')(default=False),
+                      keep_default=False)
+
+        # Adding field 'Category.header3_name'
+        db.add_column('products_category', 'header3_name',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header1_name_tr'
+        db.add_column('products_category', 'header1_name_tr',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header4_name'
+        db.add_column('products_category', 'header4_name',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header1_name'
+        db.add_column('products_category', 'header1_name',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header2_name_tr'
+        db.add_column('products_category', 'header2_name_tr',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header3_name_de'
+        db.add_column('products_category', 'header3_name_de',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header4_name_de'
+        db.add_column('products_category', 'header4_name_de',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header3_name_en'
+        db.add_column('products_category', 'header3_name_en',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header4_name_en'
+        db.add_column('products_category', 'header4_name_en',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header1_name_de'
+        db.add_column('products_category', 'header1_name_de',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header1_name_en'
+        db.add_column('products_category', 'header1_name_en',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header2_name_en'
+        db.add_column('products_category', 'header2_name_en',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Category.header2_name_de'
+        db.add_column('products_category', 'header2_name_de',
+                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
+                      keep_default=False)
 
 
     models = {

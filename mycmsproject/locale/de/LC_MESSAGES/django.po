@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-05 16:44+0200\n"
+"POT-Creation-Date: 2013-06-23 16:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: settings.py:21 settings.py:116
+#: settings.py:21 settings.py:126
 msgid "English"
 msgstr ""
 
-#: settings.py:22 settings.py:117
+#: settings.py:22 settings.py:127
 msgid "Turkish"
 msgstr ""
 
-#: settings.py:23 settings.py:118
+#: settings.py:23 settings.py:128
 msgid "German"
 msgstr ""
 
@@ -42,37 +42,100 @@ msgstr ""
 msgid "Product Search Plugin"
 msgstr ""
 
-#: products/templates/products/category_view.html:26
-#: products/templates/products/index.html:31
-msgid "There are no products."
+#: products/templates/products/category_view.html:23
+#: products/templates/products/category_view.html:50
+#: products/templates/products/index.html:15
+#: products/templates/products/index.html:42
+#: products/templates/products/product_view.html:13
+#: products_sec/templates/products/category_view.html:23
+#: products_sec/templates/products/category_view.html:50
+#: products_sec/templates/products/product_view.html:16
+msgid "Yüksel No"
 msgstr ""
 
-#: products/templates/products/index.html:15
+#: products/templates/products/category_view.html:24
+#: products/templates/products/category_view.html:51
+#: products/templates/products/index.html:16
+#: products/templates/products/index.html:43
+#: products_sec/templates/products/category_view.html:24
+#: products_sec/templates/products/category_view.html:51
+#: products_sec/templates/products/index.html:15
+#: products_sec/templates/products/index.html:42
 msgid "Image"
 msgstr ""
 
-#: products/templates/products/index.html:16
-msgid "Name"
+#: products/templates/products/category_view.html:25
+#: products/templates/products/category_view.html:52
+#: products/templates/products/index.html:17
+#: products/templates/products/index.html:44
+#: products/templates/products/product_view.html:14
+#: products_sec/templates/products/category_view.html:25
+#: products_sec/templates/products/category_view.html:52
+#: products_sec/templates/products/index.html:18
+#: products_sec/templates/products/index.html:45
+#: products_sec/templates/products/product_view.html:19
+msgid "OEM Numbers"
 msgstr ""
 
-#: products/templates/products/product_view.html:11
-msgid "Engine"
+#: products/templates/products/category_view.html:26
+#: products/templates/products/category_view.html:53
+#: products/templates/products/index.html:18
+#: products/templates/products/index.html:45
+#: products_sec/templates/products/category_view.html:26
+#: products_sec/templates/products/category_view.html:53
+#: products_sec/templates/products/product_view.html:35
+msgid "Description"
 msgstr ""
 
-#: products/templates/products/product_view.html:12
+#: products/templates/products/category_view.html:58
+#: products/templates/products/index.html:50
+#: products_sec/templates/products/category_view.html:58
+#: products_sec/templates/products/index.html:50
+msgid "There are no products."
+msgstr ""
+
+#: products/templates/products/index.html:10
+#: products_sec/templates/products/index.html:10
+msgid "PRODUCTS"
+msgstr ""
+
+#: products/templates/products/product_view.html:15
+#: products_sec/templates/products/product_view.html:22
 msgid "Type"
 msgstr ""
 
-#: products/templates/products/product_view.html:13
-msgid "Details"
+#: products/templates/products/product_view.html:15
+#: products_sec/templates/products/product_view.html:22
+msgid "Model"
 msgstr ""
 
-#: products/templates/products/search_results.html:4
-msgid "Return to search"
+#: products/templates/products/product_view.html:16
+#: products_sec/templates/products/product_view.html:25
+msgid "Engine"
 msgstr ""
 
-#: products/templates/products/search_results.html:8
+#: products/templates/products/search_results.html:9
+#: products_sec/templates/products/search_results.html:9
 msgid "Search results"
+msgstr ""
+
+#: products/templates/products/send_form.html:9
+msgid "Thank you"
+msgstr ""
+
+#: products_sec/cms_app.py:6
+msgid "Product Sec App"
+msgstr ""
+
+#: products_sec/templates/products/index.html:16
+#: products_sec/templates/products/index.html:43
+#: templates/search_plugin.html:36
+msgid "Brand"
+msgstr ""
+
+#: products_sec/templates/products/index.html:17
+#: products_sec/templates/products/index.html:44
+msgid "Name"
 msgstr ""
 
 #: templates/content_home.html:22
@@ -97,10 +160,6 @@ msgstr ""
 
 #: templates/search_plugin.html:28
 msgid "Please Choose"
-msgstr ""
-
-#: templates/search_plugin.html:36
-msgid "Brand"
 msgstr ""
 
 #: templates/search_plugin.html:40

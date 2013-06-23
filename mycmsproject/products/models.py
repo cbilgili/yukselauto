@@ -28,7 +28,12 @@ class Category(MPTTModel):
     position = models.PositiveSmallIntegerField("Position", default=0)
     meta_keywords = models.TextField(max_length=200, null=True, blank=True)
     meta_description = models.CharField(max_length=200, null=True, blank=True)
-
+    header1_name = models.CharField(max_length=200, null=True, blank=True, default='Yuksel No')
+    header2_name = models.CharField(max_length=200, null=True, blank=True, default='Image')
+    header3_name = models.CharField(max_length=200, null=True, blank=True, default='OEM No')
+    header4_name = models.CharField(max_length=200, null=True, blank=True, default='Description')
+    show_image = models.BooleanField(default=True)
+    can_go_to_detail_page = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['position']
