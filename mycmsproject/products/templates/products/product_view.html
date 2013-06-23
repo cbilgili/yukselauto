@@ -22,7 +22,7 @@
                 </div>
             </td>
             <td align="center">{{ product.oem|linebreaksbr }}</td>
-            <td align="center">{{ product.type|linebreaksbr }}</td>
+            <td align="center">{{ product.type|safe }}</td>
             <td align="center">{{ product.engine|linebreaksbr }}</td>
         </tr>
         <tr>

@@ -34,7 +34,7 @@ def view_category(request, category_id, parentslug, slug, product_type):
     category = Category.objects.get(id=category_id)
 
     return render_to_response('products/category_view.html', {
-        'products': category.product_set.all().order_by('-id'),
+        'products': category.product_set.all(),
         'category': get_object_or_404(Category, pk=category_id),
         'category_all': get_category_all(request)
     }, context_instance=RequestContext(request))

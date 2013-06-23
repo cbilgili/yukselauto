@@ -36,7 +36,7 @@ DATABASES = {
             # Not used with sqlite3.
             "PASSWORD": "1q2w3e",
             # Set to empty string for localhost. Not used with sqlite3.
-            "HOST": "",
+            "HOST": "/Applications/MAMP/tmp/mysql/mysql.sock",
             # Set to empty string for default. Not used with sqlite3.
             "PORT": "",
         }
