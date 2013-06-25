@@ -11,28 +11,19 @@
     {% if products %}
         <table  id="product" width="640" align="center" cellspacing="0" cellpadding="0">
             <thead>
-            {% if category.product_type.id == 1 %}
-                <tr>
-                    <td width="80">{{ category.header1_name }}</td>
-                    <td width="180">{% if category.show_image == True %}{{ category.header2_name }}{% endif %}</td>
-                    <td width="170">{{ category.header3_name }}</td>
-                    <td width="250">{{ category.header4_name }}</td>
-                </tr>
-            {% else %}
                 <tr>
                     <td width="80">{% trans "Yüksel No" %}</td>
                     <td width="180">{% trans "Image" %}</td>
                     <td width="170">{% trans "OEM Numbers" %}</td>
                     <td width="250">{% trans "Description" %}</td>
                 </tr>
-            {%  endif %}
             </thead>
             <tbody>
             {% for product in products %}
                 <tr style="cursor: pointer;" onmouseover="this.bgColor='#F7F7F7'" onmouseout="this.bgColor='#FEFEFE'">
-                    <td>{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.yuksel_no }}</a>{% else %}{{ product.yuksel_no }}{% endif %}</td>
+                    <td>{% if product.category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.yuksel_no }}</a>{% else %}{{ product.yuksel_no }}{% endif %}</td>
                     <td>
-                        {% if category.show_image == 1 %}
+                        {% if product.category.show_image == 1 %}
                             <div class="imageRow">
                                 <div class="single">
                                     {% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a>{% else %}<img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100">{% endif %}
@@ -40,8 +31,8 @@
                             </div>
                         {% endif %}
                     </td>
-                    <td>{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.oem|linebreaksbr }}</a>{% else %}{{ product.oem|linebreaksbr }}{% endif %}</td>
-                    <td>{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.description|safe }}</a>{% else %}{{ product.description|safe }}{% endif %}</td>
+                    <td>{% if product.category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.oem|linebreaksbr }}</a>{% else %}{{ product.oem|linebreaksbr }}{% endif %}</td>
+                    <td>{% if product.category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.description|safe }}</a>{% else %}{{ product.description|safe }}{% endif %}</td>
                 </tr>
             {% endfor %}
             </tbody>

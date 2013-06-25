@@ -217,3 +217,5 @@ table.product-details tr td .imageRow {width:132px; margin:auto;}
 
 
 #nav li ul {display: none;}
+a.home_product_title {padding: 20px; background-color: #f3f3f3; font-size: 14px;font-weight: bold;text-align: center;color: #000000;display: block;text-decoration: none}
+a.home_product_title:hover {background-color: #051733;color: #ffffff}
