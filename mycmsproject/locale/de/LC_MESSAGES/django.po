@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-23 16:03+0300\n"
+"POT-Creation-Date: 2013-07-18 12:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "German"
 msgstr ""
 
-#: guest/cms_plugins.py:10
+#: guest/cms_plugins.py:11
 msgid "Hello Plugin"
 msgstr ""
 
@@ -42,10 +42,10 @@ msgstr ""
 msgid "Product Search Plugin"
 msgstr ""
 
-#: products/templates/products/category_view.html:23
-#: products/templates/products/category_view.html:50
+#: products/templates/products/category_view.html:30
+#: products/templates/products/category_view.html:60
 #: products/templates/products/index.html:15
-#: products/templates/products/index.html:42
+#: products/templates/products/index.html:44
 #: products/templates/products/product_view.html:13
 #: products_sec/templates/products/category_view.html:23
 #: products_sec/templates/products/category_view.html:50
@@ -53,10 +53,10 @@ msgstr ""
 msgid "Yüksel No"
 msgstr ""
 
-#: products/templates/products/category_view.html:24
-#: products/templates/products/category_view.html:51
+#: products/templates/products/category_view.html:31
+#: products/templates/products/category_view.html:61
 #: products/templates/products/index.html:16
-#: products/templates/products/index.html:43
+#: products/templates/products/index.html:45
 #: products_sec/templates/products/category_view.html:24
 #: products_sec/templates/products/category_view.html:51
 #: products_sec/templates/products/index.html:15
@@ -64,10 +64,10 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: products/templates/products/category_view.html:25
-#: products/templates/products/category_view.html:52
+#: products/templates/products/category_view.html:32
+#: products/templates/products/category_view.html:62
 #: products/templates/products/index.html:17
-#: products/templates/products/index.html:44
+#: products/templates/products/index.html:46
 #: products/templates/products/product_view.html:14
 #: products_sec/templates/products/category_view.html:25
 #: products_sec/templates/products/category_view.html:52
@@ -77,18 +77,18 @@ msgstr ""
 msgid "OEM Numbers"
 msgstr ""
 
-#: products/templates/products/category_view.html:26
-#: products/templates/products/category_view.html:53
+#: products/templates/products/category_view.html:33
+#: products/templates/products/category_view.html:63
 #: products/templates/products/index.html:18
-#: products/templates/products/index.html:45
+#: products/templates/products/index.html:47
 #: products_sec/templates/products/category_view.html:26
 #: products_sec/templates/products/category_view.html:53
 #: products_sec/templates/products/product_view.html:35
 msgid "Description"
 msgstr ""
 
-#: products/templates/products/category_view.html:58
-#: products/templates/products/index.html:50
+#: products/templates/products/category_view.html:68
+#: products/templates/products/index.html:52
 #: products_sec/templates/products/category_view.html:58
 #: products_sec/templates/products/index.html:50
 msgid "There are no products."
@@ -129,7 +129,7 @@ msgstr ""
 
 #: products_sec/templates/products/index.html:16
 #: products_sec/templates/products/index.html:43
-#: templates/search_plugin.html:36
+#: templates/search_plugin.html:39
 msgid "Brand"
 msgstr ""
 
@@ -146,22 +146,30 @@ msgstr ""
 msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
 msgstr ""
 
+#: templates/content_home.html:33
+msgid "Download Brochure"
+msgstr ""
+
 #: templates/search_plugin.html:5
 msgid "YUKSEL NO / OEM NO SEARCH"
 msgstr ""
 
-#: templates/search_plugin.html:13 templates/search_plugin.html.py:57
+#: templates/search_plugin.html:8
+msgid "(WATER PUMPS)"
+msgstr ""
+
+#: templates/search_plugin.html:16 templates/search_plugin.html.py:60
 msgid "Search"
 msgstr ""
 
-#: templates/search_plugin.html:25
+#: templates/search_plugin.html:28
 msgid "Category"
 msgstr ""
 
-#: templates/search_plugin.html:28
+#: templates/search_plugin.html:31
 msgid "Please Choose"
 msgstr ""
 
-#: templates/search_plugin.html:40
+#: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr ""
