@@ -225,3 +225,11 @@ a.home_product_title:hover {background-color: #051733;color: #ffffff}
 .pdfdownload a div.text{padding-top: 50px}
 
 .last-column p {text-align: center; text-indent: 0}
+
+.content .back {margin-top: 25px;}
+
+ul.news li {list-style: none}
+ul.news li a {display: block;clear: both; border-bottom: 1px solid #fff5ee }
+ul.news li img {float: left}
+ul.news li h3 {float: left; font-size: 20px;padding-top: 15px;padding-left: 15px;}
+ul.news li h3 span.smaller {font-size: 12px;}

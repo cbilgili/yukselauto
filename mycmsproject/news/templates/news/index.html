@@ -1,0 +1,16 @@
+{% extends 'content_main.html' %}
+{% load i18n %}
+
+
+{% block content %}
+<h1>{% trans "News" %}</h1>
+    {% if news_all %}
+        <ul class='news'>
+        {% for news in news_all %}
+            <li><a href="{{ news.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/news_icon.png" alt=""><h3>{{ news.title }}<br /><span class='smaller'>{% trans 'Click for details' %}</span></h3></a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans "There are no news." %}</p><
+    {% endif %}
+{% endblock %}

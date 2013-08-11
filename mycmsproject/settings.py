@@ -137,6 +137,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
     os.path.join(PROJECT_DIR, 'products', 'templates'),
+    os.path.join(PROJECT_DIR, 'news', 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -150,6 +151,7 @@ INSTALLED_APPS = (
 
     'products',
     'guest',
+    'news',
 
 
 

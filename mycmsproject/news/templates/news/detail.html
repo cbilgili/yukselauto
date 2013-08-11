@@ -1,0 +1,16 @@
+{% extends 'content_main.html' %}
+{% load i18n %}
+{% block head_title %}{{ product.title }}{% endblock %}
+{% block title %}{{ product.title }}{% endblock %}
+{% block meta-description %}{{ product.meta_description }}{% endblock %}
+{% block meta-keywords %}{{ product.meta_keywords }}{% endblock %}
+
+{% block content %}
+    <h1>{% trans "News" %}</h1>
+    <h2>{{ news.title }}</h2>
+    <div class='content'>
+        <div class="text">{{ news.content|safe }}</div>
+        <div class="back"><a href="{% url view_news_index %}">{% trans 'Return to news' %}</a></div>
+    </div>
+
+{% endblock %}

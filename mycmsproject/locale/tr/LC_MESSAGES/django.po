@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-18 12:24+0300\n"
-"PO-Revision-Date: 2013-07-18 12:25+0200\n"
+"POT-Creation-Date: 2013-08-11 15:47+0300\n"
+"PO-Revision-Date: 2013-08-11 15:48+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,6 +34,26 @@ msgstr "Almanca"
 msgid "Hello Plugin"
 msgstr "Hello Plugin"
 
+#: news/cms_app.py:6
+msgid "New App"
+msgstr "Haberler Uygulaması"
+
+#: news/templates/news/detail.html:9 news/templates/news/index.html:6
+msgid "News"
+msgstr "Haberler"
+
+#: news/templates/news/detail.html:13
+msgid "Return to news"
+msgstr "Haberlere geri dön"
+
+#: news/templates/news/index.html:10
+msgid "Click for details"
+msgstr "Ayrıntılar için tıklayınız"
+
+#: news/templates/news/index.html:14
+msgid "There are no news."
+msgstr "Herhangi bir haber mevcut değil"
+
 #: products/cms_app.py:6
 msgid "Product App"
 msgstr "Product App"
@@ -44,8 +64,8 @@ msgstr "Ürün Arama Eklentisi"
 
 #: products/templates/products/category_view.html:30
 #: products/templates/products/category_view.html:60
-#: products/templates/products/index.html:15
-#: products/templates/products/index.html:44
+#: products/templates/products/index.html:23
+#: products/templates/products/index.html:53
 #: products/templates/products/product_view.html:13
 #: products_sec/templates/products/category_view.html:23
 #: products_sec/templates/products/category_view.html:50
@@ -55,8 +75,8 @@ msgstr "Yüksel No"
 
 #: products/templates/products/category_view.html:31
 #: products/templates/products/category_view.html:61
-#: products/templates/products/index.html:16
-#: products/templates/products/index.html:45
+#: products/templates/products/index.html:24
+#: products/templates/products/index.html:54
 #: products_sec/templates/products/category_view.html:24
 #: products_sec/templates/products/category_view.html:51
 #: products_sec/templates/products/index.html:15
@@ -66,8 +86,8 @@ msgstr "Resim"
 
 #: products/templates/products/category_view.html:32
 #: products/templates/products/category_view.html:62
-#: products/templates/products/index.html:17
-#: products/templates/products/index.html:46
+#: products/templates/products/index.html:25
+#: products/templates/products/index.html:55
 #: products/templates/products/product_view.html:14
 #: products_sec/templates/products/category_view.html:25
 #: products_sec/templates/products/category_view.html:52
@@ -79,8 +99,8 @@ msgstr "OEM Numarası"
 
 #: products/templates/products/category_view.html:33
 #: products/templates/products/category_view.html:63
-#: products/templates/products/index.html:18
-#: products/templates/products/index.html:47
+#: products/templates/products/index.html:26
+#: products/templates/products/index.html:56
 #: products_sec/templates/products/category_view.html:26
 #: products_sec/templates/products/category_view.html:53
 #: products_sec/templates/products/product_view.html:35
@@ -88,7 +108,7 @@ msgid "Description"
 msgstr "Açıklama"
 
 #: products/templates/products/category_view.html:68
-#: products/templates/products/index.html:52
+#: products/templates/products/index.html:61
 #: products_sec/templates/products/category_view.html:58
 #: products_sec/templates/products/index.html:50
 msgid "There are no products."
@@ -179,6 +199,3 @@ msgstr "^-- Lütfen Yukarıdan Seçiniz"
 
 #~ msgid "Details"
 #~ msgstr "Ayrıntılar"
-
-#~ msgid "Return to search"
-#~ msgstr "Aramaya geri dön"

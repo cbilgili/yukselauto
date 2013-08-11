@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <!--<td align="center">{{ product.detail|safe }}&nbsp;</td>-->
-            <td colspan="4">{{ product.detail|safe }}</td>
+            <td colspan="4">{% if product.details != None %}{{ product.detail|safe }}{% endif %}</td>
         </tr>
     </table>
 {% endblock %}
