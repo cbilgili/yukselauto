@@ -71,7 +71,7 @@ class Product(models.Model):
     created = models.DateTimeField(db_index=True, auto_now_add=True)
     meta_keywords = models.CharField(max_length=200, null=True, blank=True)
     meta_description = models.CharField(max_length=200, null=True, blank=True)
-
+    dont_show_at_new = models.BooleanField(default=False)
     category = models.ForeignKey(Category, null=True)
 
     def __unicode__(self):

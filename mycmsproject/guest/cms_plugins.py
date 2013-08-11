@@ -13,7 +13,7 @@ class HelloPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         product_type = ProductType.objects.get(pk=2)
-        product = Product.objects.filter(category__product_type=product_type).order_by('?')[:1].get()
+        product = Product.objects.filter(category__product_type=product_type, dont_show_at_new = 0).order_by('?')[:1].get()
 #        product = Product.objects.all().order_by('?')[:1].get()
         context['instance'] = instance
         context['product'] = product
