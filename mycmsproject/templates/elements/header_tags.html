@@ -9,14 +9,13 @@
 <script>
     $(document).ready(function () {
         var checkCookie = $.cookie("nav-item");
-        console.log('first cookie', $.cookie("nav-item"));
         if (checkCookie != "") {
             $('#nav > li > a:eq('+checkCookie+')').addClass('active').next().show();
         }
         $('#nav > li > a').click(function(){
             var navIndex = $('#nav > li > a').index(this);
             $.cookie("nav-item", navIndex);
-            console.log('set cookie:',navIndex);
+{#            console.log('set cookie:',navIndex);#}
 {#            $('#nav li ul').slideUp();#}
 {#            if ($(this).next().is(":visible")){#}
 {#                $(this).next().slideUp();#}
@@ -27,5 +26,11 @@
             $('#nav li a').removeClass('active');
             $(this).addClass('active');
         });
+        if (window.location.pathname.indexOf('import')>-1)
+        {
+            $('div.menu ul li').attr('class','sibling');
+            $('div.menu ul li:eq(3)').attr('class','selected');
+        }
+
     });
 </script>

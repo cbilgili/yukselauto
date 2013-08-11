@@ -12,10 +12,12 @@ class HelloPlugin(CMSPluginBase):
     render_template = "hello_plugin.html"
 
     def render(self, context, instance, placeholder):
-
-        product = Product.objects.all().order_by('?')[:1].get()
+        product_type = ProductType.objects.get(pk=2)
+        product = Product.objects.filter(category__product_type=product_type).order_by('?')[:1].get()
+#        product = Product.objects.all().order_by('?')[:1].get()
         context['instance'] = instance
         context['product'] = product
+        context['product_type'] = product_type.name
         return context
 
 plugin_pool.register_plugin(HelloPlugin)

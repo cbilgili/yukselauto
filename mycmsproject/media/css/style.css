@@ -30,8 +30,8 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #menu-wall .menu {margin:auto; text-align:center; /* padding:11px 0 12px; */}
 #menu-wall .menu ul {list-style:none outside none; padding:11px 0 12px;}
 #menu-wall .menu ul li {display:inline; /* height:48px; */}
-/* #menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
-#menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;} */
+#menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
+#menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;}
 #menu-wall .menu ul li a {color:#FFF; font-size:13px; font-weight: bold; padding:11px 10px 12px 10px; text-decoration: none;}
 #menu-wall .menu ul li a:hover {background:url(/media/img/transparent.png) repeat; color:#1B2940}
 
@@ -101,7 +101,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; text-align:center;}
 #content-wall .content-left-right .right-column .content table#product .imageRow {width:116px}
 
-#content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:1px solid #C1BFBF;  font-weight:bold; color:#FFF; font-size:13px }
+#content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:none;  font-weight:bold; color:#FFF; font-size:13px }
 
 #content-wall .content-left-right .right-column .content table#product tbody tr {/*background:#ffdddd*/}
 #content-wall .content-left-right .right-column .content table#product tbody tr td {padding:8px; border-bottom:1px solid #1484C5; vertical-align: middle;}
@@ -223,3 +223,5 @@ a.home_product_title:hover {background-color: #051733;color: #ffffff}
 .pdfdownload a {background: url(/media/img/pdf-download.jpg) no-repeat;display: block;width: 150px; height: 110px;margin-top: 20px;padding-left: 120px;color: #515151;font-size: 14px;font-weight: bold;}
 .pdfdownload a:hover {color: #003366}
 .pdfdownload a div.text{padding-top: 50px}
+
+.last-column p {text-align: center; text-indent: 0}
