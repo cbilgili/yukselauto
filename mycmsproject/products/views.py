@@ -10,10 +10,10 @@ def index(request):
 
     if is_import_category(request):
         product_type = product_type_obj = ProductType.objects.get(pk=1)
-        products = Product.objects.filter(category__product_type=product_type).order_by('-id')[:15]
+        products = Product.objects.filter(category__product_type_id=product_type.id).order_by('-id')[:15]
     else:
         product_type = product_type_obj = ProductType.objects.get(pk=2)
-        products = Product.objects.filter(category__product_type=product_type).order_by('-id')[:15]
+        products = Product.objects.filter(category__product_type_id=product_type.id).order_by('-id')[:15]
 
 
     return render_to_response('products/index.html', {

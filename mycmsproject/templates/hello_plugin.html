@@ -1,8 +1,8 @@
 {% load cms_tags menu_tags i18n %}
 <td>
     <p class="ct_title">{% trans "NEWS FROM YUKSEL AUTOMATIVE" %}</p>
-    <img src="{{ MEDIA_URL }}img/news.jpg"/>
-    <h3>{{ news.title }}</h3>
+{#    <img src="{{ MEDIA_URL }}img/news.jpg"/>#}
+    <h3 style='text-align: center'>{{ news.title }}</h3>
     <div>{{ news.content|safe }}</div>
     <br />
     <a href="{{ news.get_absolute_url }}">{% trans 'Click for details' %}</a>
@@ -10,6 +10,6 @@
 <td>
     <p class="ct_title">{% trans "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE" %}</p>
     <a href="{{ product.get_absolute_url }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="{{ product.title }}" width="280"></a>
-    <a class="home_product_title" href="{{ product.get_absolute_url }}">{{ product_type }} - {{ product.title }}</a>
+    <a class="home_product_title" href="{{ product.get_absolute_url }}">{{ product_type }} <br /> {{ product.title }}</a>
 </td>
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-11 15:47+0300\n"
-"PO-Revision-Date: 2013-08-11 15:48+0200\n"
+"PO-Revision-Date: 2013-08-15 17:50+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -160,11 +160,11 @@ msgstr "İsim"
 
 #: templates/content_home.html:22
 msgid "NEWS FROM YUKSEL AUTOMATIVE"
-msgstr "YÜKSEL AUTOMATIVE'DEN HABERLER"
+msgstr "YÜKSEL OTOMOTİV’DEN HABERLER"
 
 #: templates/content_home.html:27
 msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
-msgstr "YÜKSEL AUTOMATIVE'DEN YENİ ÜRÜNLER"
+msgstr "YENİ ÜRÜNLER"
 
 #: templates/content_home.html:33
 msgid "Download Brochure"
@@ -172,7 +172,7 @@ msgstr "Broşürü İndir"
 
 #: templates/search_plugin.html:5
 msgid "YUKSEL NO / OEM NO SEARCH"
-msgstr "YÜKSEL NO / OEM NOLA ARAMA"
+msgstr "YÜKSEL NO VEYA OEM NO İLE ARAMA"
 
 #: templates/search_plugin.html:8
 msgid "(WATER PUMPS)"
