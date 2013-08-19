@@ -12,12 +12,12 @@
         <table  id="product" width="640" align="center" cellspacing="0" cellpadding="0">
             <thead>
             {% if products.0.category.product_type.id == 1 %}
-                <tr>
-                    <td width="80">{{ products.0.category.header1_name }}</td>
-                    <td width="180">{% if products.0.category.show_image == True %}{{ category.header2_name }}{% endif %}</td>
-                    <td width="170">{{ products.0.category.header3_name }}</td>
-                    <td width="250">{{ products.0.category.header4_name }}</td>
-                </tr>
+{#                <tr>#}
+{#                    <td width="80">{{ products.0.category.header1_name }}</td>#}
+{#                    <td width="180">{% if products.0.category.show_image == True %}{{ category.header2_name }}{% endif %}</td>#}
+{#                    <td width="170">{{ products.0.category.header3_name }}</td>#}
+{#                    <td width="250">{{ products.0.category.header4_name }}</td>#}
+{#                </tr>#}
             {% else %}
                 <tr>
                     <td width="80">{% trans "Yüksel No" %}</td>

@@ -14,7 +14,7 @@ img {border:none}
 
 p {line-height: 18px; text-align: justify; text-indent:10px;}
 
-.ct_title {color:#515151; font-weight:bold; text-decoration:none; margin-bottom:12px;text-align: center}
+.ct_title {color:#005CA1; font-weight:bold; text-decoration:none; margin-bottom:12px;text-align: center;font-size: 14px;}
 
 .pr-child-title {color:#515151; font-weight:bold; font-size:12px; margin:6px 0 27px}
 
@@ -218,7 +218,7 @@ table.product-details tr td .imageRow {width:132px; margin:auto;}
 
 #nav li ul {display: none;}
 a.home_product_title {padding: 20px; background-color: #f3f3f3; font-size: 14px;font-weight: bold;text-align: center;color: #000000;display: block;text-decoration: none}
-a.home_product_title:hover {background-color: #051733;color: #ffffff}
+a.home_product_title:hover {color: #005CA1}
 
 .pdfdownload a {background: url(/media/img/pdf-download.jpg) no-repeat;display: block;width: 150px; height: 110px;margin-top: 20px;padding-left: 120px;color: #515151;font-size: 14px;font-weight: bold;}
 .pdfdownload a:hover {color: #003366}

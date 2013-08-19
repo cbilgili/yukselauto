@@ -6,15 +6,80 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.cookie.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/script.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/lightbox.js"></script>
-<script>
+<script type="text/javascript">
+    var yuksel = {
+        cookieList: function (cookieName) {
+
+            var cookie = $.cookie(cookieName);
+
+            var items = cookie ? eval("([" + cookie + "])") : [];
+
+            return {
+                add: function (val) {
+                    var index = items.indexOf(val);
+
+                    // Note: Add only unique values.
+                    if (index == -1) {
+                        items.push(val);
+                        $.cookie(cookieName, items.join(','), { expires: 365, path: '/'});
+                    }
+                },
+                remove: function (val) {
+                    var index = items.indexOf(val);
+
+                    if (index != -1) {
+                        items.splice(index, 1);
+                        $.cookie(cookieName, items.join(','), { expires: 365, path: '/' });
+                    }
+                },
+                indexOf: function (val) {
+                    return items.indexOf(val);
+                },
+                clear: function () {
+                    items = null;
+                    $.cookie(cookieName, null, { expires: 365, path: '/' });
+                },
+                items: function () {
+                    return items;
+                },
+                length: function () {
+                    return items.length;
+                },
+                join: function (separator) {
+                    return items.join(separator);
+                }
+            };
+        }
+    };
+
+</script>
+<script type="text/javascript">
+
+
     $(document).ready(function () {
-        var checkCookie = $.cookie("nav-item");
-        if (checkCookie != "") {
-            $('#nav > li > a:eq('+checkCookie+')').addClass('active').next().show();
+
+
+        var checkCookie = yuksel.cookieList("nav-item");
+        if (checkCookie.length()>0) {
+            for (var i = 0; i < checkCookie.length(); i++) {
+                var item = checkCookie.items()[i];
+                $('#nav > li > a:eq('+item+')').addClass('active').next().show();
+            }
         }
         $('#nav > li > a').click(function(){
             var navIndex = $('#nav > li > a').index(this);
-            $.cookie("nav-item", navIndex);
+            //$.cookie("nav-item", navIndex);
+            if ($.inArray(navIndex, checkCookie.items())>-1)
+            {
+                checkCookie.remove(navIndex);
+                $(this).removeClass('active');
+
+            }else
+            {
+                checkCookie.add(navIndex);
+                $(this).addClass('active');
+            }
+
 {#            console.log('set cookie:',navIndex);#}
 {#            $('#nav li ul').slideUp();#}
 {#            if ($(this).next().is(":visible")){#}
@@ -23,14 +88,18 @@
 {#                $(this).next().slideToggle();#}
 {#            }#}
             $(this).next().slideToggle();
-            $('#nav li a').removeClass('active');
-            $(this).addClass('active');
         });
         if (window.location.pathname.indexOf('import')>-1)
         {
             $('div.menu ul li').attr('class','sibling');
             $('div.menu ul li:eq(3)').attr('class','selected');
         }
-
+{#        var cookieList = $.fn.cookieList("cookieName");#}
+{#        cookieList.add(1);#}
+{#        cookieList.add(2);#}
+{#        cookieList.remove(1);#}
+{#        var index = cookieList.indexOf(2);#}
+{#        var length = cookieList.length();#}
+{#        alert(cookieList.items());#}
     });
 </script>

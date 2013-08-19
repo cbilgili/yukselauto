@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-11 15:47+0300\n"
-"PO-Revision-Date: 2013-08-15 17:50+0200\n"
+"POT-Creation-Date: 2013-08-19 11:58+0300\n"
+"PO-Revision-Date: 2013-08-19 11:59+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Türkçe"
 msgid "German"
 msgstr "Almanca"
 
-#: guest/cms_plugins.py:11
+#: guest/cms_plugins.py:12
 msgid "Hello Plugin"
 msgstr "Hello Plugin"
 
@@ -46,7 +46,7 @@ msgstr "Haberler"
 msgid "Return to news"
 msgstr "Haberlere geri dön"
 
-#: news/templates/news/index.html:10
+#: news/templates/news/index.html:10 templates/hello_plugin.html:8
 msgid "Click for details"
 msgstr "Ayrıntılar için tıklayınız"
 
@@ -158,17 +158,17 @@ msgstr "Marka"
 msgid "Name"
 msgstr "İsim"
 
-#: templates/content_home.html:22
-msgid "NEWS FROM YUKSEL AUTOMATIVE"
-msgstr "YÜKSEL OTOMOTİV’DEN HABERLER"
-
-#: templates/content_home.html:27
-msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
-msgstr "YENİ ÜRÜNLER"
-
-#: templates/content_home.html:33
+#: templates/content_home.html:26
 msgid "Download Brochure"
 msgstr "Broşürü İndir"
+
+#: templates/hello_plugin.html:3
+msgid "NEWS"
+msgstr "HABERLER"
+
+#: templates/hello_plugin.html:11
+msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
+msgstr "YENİ ÜRÜNLER"
 
 #: templates/search_plugin.html:5
 msgid "YUKSEL NO / OEM NO SEARCH"
@@ -193,6 +193,9 @@ msgstr "Lütfen Seçiniz"
 #: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr "^-- Lütfen Yukarıdan Seçiniz"
+
+#~ msgid "NEWS FROM YUKSEL AUTOMATIVE"
+#~ msgstr "YÜKSEL OTOMOTİV’DEN HABERLER"
 
 #~ msgid "Products"
 #~ msgstr "ÜRÜNLER"

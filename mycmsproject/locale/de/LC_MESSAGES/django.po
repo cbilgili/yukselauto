@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-11 15:47+0300\n"
+"POT-Creation-Date: 2013-08-19 11:59+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "German"
 msgstr ""
 
-#: guest/cms_plugins.py:11
+#: guest/cms_plugins.py:12
 msgid "Hello Plugin"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Return to news"
 msgstr ""
 
-#: news/templates/news/index.html:10
+#: news/templates/news/index.html:10 templates/hello_plugin.html:8
 msgid "Click for details"
 msgstr ""
 
@@ -158,16 +158,16 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: templates/content_home.html:22
-msgid "NEWS FROM YUKSEL AUTOMATIVE"
-msgstr ""
-
-#: templates/content_home.html:27
-msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
-msgstr ""
-
-#: templates/content_home.html:33
+#: templates/content_home.html:26
 msgid "Download Brochure"
+msgstr ""
+
+#: templates/hello_plugin.html:3
+msgid "NEWS"
+msgstr ""
+
+#: templates/hello_plugin.html:11
+msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
 msgstr ""
 
 #: templates/search_plugin.html:5
