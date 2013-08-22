@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-22 11:26+0300\n"
-"PO-Revision-Date: 2013-08-22 11:29+0200\n"
+"POT-Creation-Date: 2013-08-22 12:33+0300\n"
+"PO-Revision-Date: 2013-08-22 12:35+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -159,15 +159,15 @@ msgid "Name"
 msgstr "İsim"
 
 #: templates/content_home.html:26
-msgid "Download Brochure"
-msgstr "Broşürü İndir"
+msgid "Download Catalogue"
+msgstr "Katalog İndir"
 
 #: templates/hello_plugin.html:3
 msgid "NEWS"
 msgstr "HABERLER"
 
 #: templates/hello_plugin.html:11
-msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
+msgid "NEW PRODUCTS"
 msgstr "YENİ ÜRÜNLER"
 
 #: templates/search_plugin.html:5
@@ -175,8 +175,8 @@ msgid "YUKSEL NO / OEM NO SEARCH"
 msgstr "YÜKSEL NO VEYA OEM NO İLE ARAMA"
 
 #: templates/search_plugin.html:8
-msgid "(FOR WATER PUMPS)"
-msgstr "(SU POMPALARI İÇİNDİR)"
+msgid "(ONLY FOR WATER PUMPS)"
+msgstr "(SADECE SU POMPALARI)"
 
 #: templates/search_plugin.html:16 templates/search_plugin.html.py:60
 msgid "Search"
@@ -193,6 +193,9 @@ msgstr "Lütfen Seçiniz"
 #: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr "^-- Lütfen Yukarıdan Seçiniz"
+
+#~ msgid "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE"
+#~ msgstr "YENİ ÜRÜNLER"
 
 #~ msgid "NEWS FROM YUKSEL AUTOMATIVE"
 #~ msgstr "YÜKSEL OTOMOTİV’DEN HABERLER"

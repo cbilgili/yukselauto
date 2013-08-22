@@ -3,12 +3,15 @@
     <p class="ct_title">{% trans "NEWS" %}</p>
 {#    <img src="{{ MEDIA_URL }}img/news.jpg"/>#}
 {#    <h3 style='text-align: center'>{{ news.title }}</h3>#}
+    {% if news.image %}
+        <img src="{{MEDIA_URL}}{{ news.image }}" alt="{{ news.title }}" width="280">
+    {% endif %}
     <div>{{ news.content|safe }}</div>
     <br />
     <a href="{{ news.get_absolute_url }}">{% trans 'Click for details' %}</a>
 </td>
 <td>
-    <p class="ct_title">{% trans "NEW PRODUCTS FROM YUKSEL AUTOMOTIVE" %}</p>
+    <p class="ct_title">{% trans "NEW PRODUCTS" %}</p>
     <a href="{{ product.get_absolute_url }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="{{ product.title }}" width="280"></a>
     <a class="home_product_title" href="{{ product.get_absolute_url }}">{{ product_type|upper }} <br /> {{ product.title }}</a>
 </td>
