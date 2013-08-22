@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-19 11:59+0300\n"
+"POT-Creation-Date: 2013-08-22 11:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,7 +175,7 @@ msgid "YUKSEL NO / OEM NO SEARCH"
 msgstr ""
 
 #: templates/search_plugin.html:8
-msgid "(WATER PUMPS)"
+msgid "(FOR WATER PUMPS)"
 msgstr ""
 
 #: templates/search_plugin.html:16 templates/search_plugin.html.py:60

@@ -15,6 +15,8 @@ img {border:none}
 p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 .ct_title {color:#005CA1; font-weight:bold; text-decoration:none; margin-bottom:12px;text-align: center;font-size: 14px;}
+.ct_title_small {color:#515151; font-weight:bold; text-decoration:none; margin-bottom:12px;text-align: center}
+.ct_title_tiny {color:#515151; font-weight:bold; text-decoration:none; margin-bottom:12px;text-align: center;font-size: 11px}
 
 .pr-child-title {color:#515151; font-weight:bold; font-size:12px; margin:6px 0 27px}
 

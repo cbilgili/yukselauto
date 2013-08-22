@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-19 11:58+0300\n"
-"PO-Revision-Date: 2013-08-19 11:59+0200\n"
+"POT-Creation-Date: 2013-08-22 11:26+0300\n"
+"PO-Revision-Date: 2013-08-22 11:29+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -175,8 +175,8 @@ msgid "YUKSEL NO / OEM NO SEARCH"
 msgstr "YÜKSEL NO VEYA OEM NO İLE ARAMA"
 
 #: templates/search_plugin.html:8
-msgid "(WATER PUMPS)"
-msgstr "(SU POMPALARI)"
+msgid "(FOR WATER PUMPS)"
+msgstr "(SU POMPALARI İÇİNDİR)"
 
 #: templates/search_plugin.html:16 templates/search_plugin.html.py:60
 msgid "Search"
