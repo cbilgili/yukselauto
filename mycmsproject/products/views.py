@@ -70,7 +70,7 @@ def search_product(request):
         category_id = request.GET.get('marka')
         category = Category.objects.get(pk=category_id)
         oem_query = category.name
-        results = Product.objects.filter(category_id = category_id).order_by('yuksel_no')
+        results = Product.objects.filter(category_id = category_id)
 
 
     return render_to_response('products/search_results.html', {
