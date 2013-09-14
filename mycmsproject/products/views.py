@@ -64,7 +64,7 @@ def search_sub_category(request, category_id):
 def search_product(request):
     oem_query = request.GET.get('oem')
     if oem_query:
-        results = Product.objects.filter(oem__icontains=oem_query) | Product.objects.filter(yuksel_no__icontains=oem_query)
+        results = Product.objects.filter(oem__icontains=oem_query).order_by('category__name') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__name')
         category = results[0].category
     else:
         category_id = request.GET.get('marka')

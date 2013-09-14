@@ -82,8 +82,18 @@ class Product(models.Model):
         return 'view_product_entry', None, { 'product_type': self.category.product_type.slug, 'slug': self.slug, 'product_id': self.id  }
 
 
+class CatalogueRequest(models.Model):
 
 
+    def __unicode__(self):
+        return '%s' % self.name
+
+#    @permalink
+#    def get_absolute_url(self):
+#        if self.parent:
+#            return 'view_category_entry', None, { 'slug': self.slug, 'parentslug': self.parent.slug, 'category_id': self.id, 'product_type': self.product_type.slug }
+#        else:
+#            return 'view_category_entry', None, { 'slug': self.slug, 'parentslug': 'category', 'category_id': self.id, 'product_type': self.product_type.slug }
 
 
 

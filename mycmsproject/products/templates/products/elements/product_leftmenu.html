@@ -9,7 +9,7 @@
         {% if not node.is_leaf_node %}
             <li><a href="javascript:void(0)">{{ node.name }}</a>
         {% else %}
-            <li><a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+            <li><a href="{{ node.get_absolute_url }}" {% if category.id == node.id %}class='chosen'{% endif %}>{{ node.name }}</a>
         {% endif %}
         {% if not node.is_leaf_node %}
             <ul class="children">

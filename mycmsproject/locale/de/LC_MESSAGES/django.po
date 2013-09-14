@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-22 12:33+0300\n"
-"PO-Revision-Date: 2013-08-22 12:43+0200\n"
+"POT-Creation-Date: 2013-09-14 14:00+0300\n"
+"PO-Revision-Date: 2013-09-14 14:05+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "Nachricht"
 msgid "Return to news"
 msgstr "Züruck zu Nachricht"
 
-#: news/templates/news/index.html:10 templates/hello_plugin.html:8
+#: news/templates/news/index.html:10 templates/hello_plugin.html:11
 msgid "Click for details"
 msgstr "Für Details klicken."
 
@@ -157,15 +157,11 @@ msgstr "Marke"
 msgid "Name"
 msgstr "Name"
 
-#: templates/content_home.html:26
-msgid "Download Catalogue"
-msgstr "Nachladen Katalog"
-
 #: templates/hello_plugin.html:3
 msgid "NEWS"
 msgstr "NACHRICHT"
 
-#: templates/hello_plugin.html:11
+#: templates/hello_plugin.html:14
 msgid "NEW PRODUCTS"
 msgstr "NEUE PRODUKTE"
 
@@ -174,7 +170,7 @@ msgid "YUKSEL NO / OEM NO SEARCH"
 msgstr "YUKSEL NO / OEM NO SUCHEN"
 
 #: templates/search_plugin.html:8
-msgid "(ONLY FOR WATER PUMPS)"
+msgid "(Only For Water Pumps)"
 msgstr "(Nur für Wasserpumpen)"
 
 #: templates/search_plugin.html:16 templates/search_plugin.html.py:60
@@ -192,3 +188,9 @@ msgstr "Bitte aussuchen"
 #: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr "^-- Bitte assuchen kategorie"
+
+#~ msgid "Download Catalogue"
+#~ msgstr "Nachladen Katalog"
+
+#~ msgid "(ONLY FOR WATER PUMPS)"
+#~ msgstr "(Nur für Wasserpumpen)"
