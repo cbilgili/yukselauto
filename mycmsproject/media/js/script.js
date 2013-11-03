@@ -11,6 +11,27 @@ var slideshowSpeed = 6000;
 var photos = [
     {
         "title" : "Mountainbiking",
+        "image" : "home_01.jpg",
+        "url" : "http://www.sxc.hu/photo/1221065",
+        "firstline" : "Get out and be",
+        "secondline" : "active"
+    },
+    {
+        "title" : "Mountainbiking",
+        "image" : "home_02.jpg",
+        "url" : "http://www.sxc.hu/photo/1221065",
+        "firstline" : "Get out and be",
+        "secondline" : "active"
+    },
+        {
+        "title" : "Mountainbiking",
+        "image" : "home_03.jpg",
+        "url" : "http://www.sxc.hu/photo/1221065",
+        "firstline" : "Get out and be",
+        "secondline" : "active"
+    },
+    {
+        "title" : "Mountainbiking",
         "image" : "gallery_first.jpg",
         "url" : "http://www.sxc.hu/photo/1221065",
         "firstline" : "Get out and be",
