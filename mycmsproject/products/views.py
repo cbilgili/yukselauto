@@ -5,6 +5,7 @@ from products.models import Product, Category, ProductType
 from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail, EmailMessage
+from django.core.exceptions import ObjectDoesNotExist
 
 def index(request):
 
@@ -63,20 +64,29 @@ def search_sub_category(request, category_id):
 
 def search_product(request):
     oem_query = request.GET.get('oem')
-    if oem_query:
-        results = Product.objects.filter(oem__icontains=oem_query).order_by('category__name') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__name')
-        category = results[0].category
-    else:
-        category_id = request.GET.get('marka')
-        category = Category.objects.get(pk=category_id)
-        oem_query = category.name
-        results = Product.objects.filter(category_id = category_id)
+    try:
+        if oem_query:
+            results = Product.objects.filter(oem__icontains=oem_query).order_by('category__id', 'yuksel_no') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__id', 'yuksel_no')
+            if results.length > 0:
+                category = results[0].category
+            else:
+                category = None
+        else:
+            category_id = request.GET.get('marka')
+            category = Category.objects.get(pk=category_id)
+            oem_query = category.name
+            results = Product.objects.filter(category_id = category_id).order_by('category__id', 'yuksel_no')
+    except Exception:
+        results = None
+        category = None
+    root_categories = Category.objects.filter(product_type_id = 2, level = 0)
 
 
     return render_to_response('products/search_results.html', {
         'products': results,
         'term' : oem_query,
-        'category' : category
+        'category' : category,
+        'root_categories': root_categories
     }, context_instance=RequestContext(request))
 @csrf_exempt
 def send_form(request):
@@ -84,9 +94,9 @@ def send_form(request):
     for key, value in request.POST.iteritems():
         a+= '<tr><td><strong>'+key+'</strong></td><td>'+value+'</td></tr>'
     a += '</table></body></html>'
-    send_mail('Yüksel Oto Form', a, 'mail@yuksel2.bigagora.com',
-        ['cbilgili@gmail.com'], fail_silently=False)
-    subject, from_email, to = 'Yüksel Oto Form', 'mail@yuksel2.bigagora.com', 'cbilgili@gmail.com'
+    send_mail('Yüksel Oto Form', a, 'info@yukselautomotive.com',
+        ['info@yukselautomotive.com'], fail_silently=False)
+    subject, from_email, to = 'Yüksel Oto Form', 'info@yukselautomotive.com', 'info@yukselautomotive.com'
     html_content = a
     msg = EmailMessage(subject, html_content, from_email, [to])
     msg.content_subtype = "html"  # Main content is now text/html

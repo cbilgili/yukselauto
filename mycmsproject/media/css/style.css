@@ -20,7 +20,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 .pr-child-title {color:#515151; font-weight:bold; font-size:12px; margin:6px 0 27px}
 
-#header-wall {clear:both; background:none repeat scroll 0 0 #FFFFFF; height:164px;}
+#header-wall {clear:both; background:none repeat scroll 0 0 #FFFFFF; height:164px;text-align:center;}
 #header-wall .header-bar {clear:both; background:none repeat scroll 0 0 #C8C9CB; height:23px;  border-bottom: 1px solid #B6B7B9;}
 #header-wall .header-bar div.bar {width:893px; margin:auto; background:url("/media/img/header-bar.png") no-repeat scroll right 0 transparent; height:48px;}
 #header-wall .header-bar div.bar .flags {text-align:right; padding:6px 33px 0 0;}
@@ -30,7 +30,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #menu-wall {clear:both; background:url(/media/img/menu-bg.png) repeat-x #1B2940;}
 #menu-wall .menu {margin:auto; text-align:center; /* padding:11px 0 12px; */}
-#menu-wall .menu ul {list-style:none outside none; padding:11px 0 12px;}
+#menu-wall .menu ul {list-style:none outside none; padding:11px 0 12px;height:15px;}
 #menu-wall .menu ul li {display:inline; /* height:48px; */}
 #menu-wall .menu ul li.selected {background:url(/media/img/transparent.png) repeat; color:#1B2940; padding:12px 0;}
 #menu-wall .menu ul li.selected a {color:#1B2940;padding:11px 10px 12px 10px;}
@@ -42,7 +42,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #banner-wall {clear:both; height:310px; border-top: 5px solid #1484C5;}
 #banner-wall-alt {height:9px; background:url(/media/img/line.png) repeat-x #fff;}
 
-#content-wall {background:url(/media/img/content-bg.jpg) repeat-x #FFF; clear:both; overflow:auto;}
+#content-wall {background:url(/media/img/content-bg.jpg) repeat-x #FFF; clear:both; overflow:auto;text-align:center;}
 
 #content-wall .content-table {width:960px; min-height:530px; margin:auto; padding:12px 0 25px; background:#FFF}
 #content-wall .content-table tr td {vertical-align:top; width:320px; padding:10px 20px;}
@@ -135,10 +135,10 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #footer-end-wall {clear:both; background:none repeat scroll 0 0 #DADADA}
 #footer-end-wall #end-wall {width:1000px; margin:auto; height:105px; background: none repeat scroll 0 0 #DADADA;}
-#footer-end-wall #end-wall .adres {width:550px; float:left; text-align:left; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; margin-top: 21px;}
-#footer-end-wall #end-wall .adres p {padding:5px;}
+#footer-end-wall #end-wall .adres {width:620px; float:left; text-align:center; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; margin-top: 21px;}
+#footer-end-wall #end-wall .adres p {padding:5px;text-align:left !important}
 
-#footer-end-wall #end-wall .design {width:300px; float:left; text-align:right; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; }
+#footer-end-wall #end-wall .design {width:270px; text-align:center; float:left; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; }
 
 
 #footer-end-wall #end-wall .design .social-wall {text-align:right; padding:5px; height:37px;}
@@ -237,3 +237,5 @@ ul.news li a {display: block;clear: both; border-bottom: 1px solid #fff5ee }
 ul.news li img {float: left}
 ul.news li h3 {float: left; font-size: 20px;padding-top: 15px;padding-left: 15px;}
 ul.news li h3 span.smaller {font-size: 12px;}
+
+tr th {text-align: left}

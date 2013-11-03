@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-14 14:00+0300\n"
-"PO-Revision-Date: 2013-09-14 14:00+0200\n"
+"POT-Creation-Date: 2013-11-02 09:01-0500\n"
+"PO-Revision-Date: 2013-11-02 16:01+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,14 +74,7 @@ msgid "Yüksel No"
 msgstr "Yüksel No"
 
 #: products/templates/products/category_view.html:31
-#: products/templates/products/category_view.html:61
-#: products/templates/products/index.html:24
-#: products/templates/products/index.html:54
-#: products_sec/templates/products/category_view.html:24
-#: products_sec/templates/products/category_view.html:51
-#: products_sec/templates/products/index.html:15
-#: products_sec/templates/products/index.html:42
-msgid "Image"
+msgid "Picture"
 msgstr "Resim"
 
 #: products/templates/products/category_view.html:32
@@ -95,7 +88,7 @@ msgstr "Resim"
 #: products_sec/templates/products/index.html:45
 #: products_sec/templates/products/product_view.html:19
 msgid "OEM Numbers"
-msgstr "OEM Numarası"
+msgstr "OEM No"
 
 #: products/templates/products/category_view.html:33
 #: products/templates/products/category_view.html:63
@@ -106,6 +99,16 @@ msgstr "OEM Numarası"
 #: products_sec/templates/products/product_view.html:35
 msgid "Description"
 msgstr "Açıklama"
+
+#: products/templates/products/category_view.html:61
+#: products/templates/products/index.html:24
+#: products/templates/products/index.html:54
+#: products_sec/templates/products/category_view.html:24
+#: products_sec/templates/products/category_view.html:51
+#: products_sec/templates/products/index.html:15
+#: products_sec/templates/products/index.html:42
+msgid "Image"
+msgstr "Resim"
 
 #: products/templates/products/category_view.html:68
 #: products/templates/products/index.html:61
@@ -189,6 +192,10 @@ msgstr "Lütfen Seçiniz"
 #: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr "^-- Lütfen Yukarıdan Seçiniz"
+
+#: templates/elements/footer.html:26
+msgid "Taksim Caddesi No:53 Taksim / Istanbul - Turkey"
+msgstr "Taksim Caddesi No:53 Taksim / Istanbul - Türkiye"
 
 #~ msgid "Download Catalogue"
 #~ msgstr "Katalog İndir"

@@ -28,8 +28,8 @@
             {% else %}
                 <tr>
                     <td width="80">{% trans "Yüksel No" %}</td>
-                    <td width="180">{% trans "Image" %}</td>
-                    <td width="170">{% trans "OEM Numbers" %}</td>
+                    <td width="180">{% trans "Picture" %}</td>
+                    <td width="170">OEM No</td>
                     <td width="250">{% trans "Description" %}</td>
                 </tr>
             {%  endif %}
@@ -45,10 +45,10 @@
                                 {% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a>{% else %}<a rel="lightbox" href="{{MEDIA_URL}}{{ product.image }}"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.title }}" width="100"></a>{% endif %}
                             </div>
                         </div>
-                        {% endif %}
+                        {% endif %}&nbsp;
                     </td>
-                    <td>{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.oem|linebreaksbr }}</a>{% else %}{{ product.oem|linebreaksbr }}{% endif %}</td>
-                    <td class='last-column'>{% if product.description != None %}{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.description|safe }}</a>{% else %}{{ product.description|safe }}{% endif %}{% endif %}</td>
+                    <td>{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.oem|linebreaksbr }}</a>{% else %}{{ product.oem|linebreaksbr }}{% endif %}&nbsp;</td>
+                    <td class='last-column'>{% if product.description != None %}{% if category.can_go_to_detail_page == 1 %}<a href="{{ product.get_absolute_url }}">{{ product.description|safe }}</a>{% else %}{{ product.description|safe }}{% endif %}{% endif %}&nbsp;</td>
                 </tr>
             {% endfor %}
         </tbody>

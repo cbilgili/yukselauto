@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-14 14:00+0300\n"
-"PO-Revision-Date: 2013-09-14 14:05+0200\n"
+"POT-Creation-Date: 2013-11-02 09:00-0500\n"
+"PO-Revision-Date: 2013-11-02 16:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -73,15 +73,8 @@ msgid "Yüksel No"
 msgstr ""
 
 #: products/templates/products/category_view.html:31
-#: products/templates/products/category_view.html:61
-#: products/templates/products/index.html:24
-#: products/templates/products/index.html:54
-#: products_sec/templates/products/category_view.html:24
-#: products_sec/templates/products/category_view.html:51
-#: products_sec/templates/products/index.html:15
-#: products_sec/templates/products/index.html:42
-msgid "Image"
-msgstr "Image"
+msgid "Picture"
+msgstr "Bild"
 
 #: products/templates/products/category_view.html:32
 #: products/templates/products/category_view.html:62
@@ -105,6 +98,16 @@ msgstr "OEM No"
 #: products_sec/templates/products/product_view.html:35
 msgid "Description"
 msgstr "Beschreibung"
+
+#: products/templates/products/category_view.html:61
+#: products/templates/products/index.html:24
+#: products/templates/products/index.html:54
+#: products_sec/templates/products/category_view.html:24
+#: products_sec/templates/products/category_view.html:51
+#: products_sec/templates/products/index.html:15
+#: products_sec/templates/products/index.html:42
+msgid "Image"
+msgstr "Image"
 
 #: products/templates/products/category_view.html:68
 #: products/templates/products/index.html:61
@@ -188,6 +191,10 @@ msgstr "Bitte aussuchen"
 #: templates/search_plugin.html:43
 msgid "^-- Please Choose Category"
 msgstr "^-- Bitte assuchen kategorie"
+
+#: templates/elements/footer.html:26
+msgid "Taksim Caddesi No:53 Taksim / Istanbul - Turkey"
+msgstr "Taksim Caddesi No:53 Taksim / Istanbul - Türkei"
 
 #~ msgid "Download Catalogue"
 #~ msgstr "Nachladen Katalog"
