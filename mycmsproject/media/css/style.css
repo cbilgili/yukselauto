@@ -42,7 +42,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #banner-wall {clear:both; height:310px; border-top: 5px solid #1484C5;}
 #banner-wall-alt {height:9px; background:url(/media/img/line.png) repeat-x #fff;}
 
-#content-wall {background:url(/media/img/content-bg.jpg) repeat-x #FFF; clear:both; overflow:auto;text-align:center;}
+#content-wall {background:url(/media/img/content-bg.jpg) repeat-x #FFF; clear:both; overflow:auto;}
 
 #content-wall .content-table {width:960px; min-height:530px; margin:auto; padding:12px 0 25px; background:#FFF}
 #content-wall .content-table tr td {vertical-align:top; width:320px; padding:10px 20px;}
@@ -100,7 +100,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .right-column .content table tr td img {border:1px solid #CECECE; margin-bottom:15px;}
 */
 
-#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; text-align:center;}
+#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; }
 #content-wall .content-left-right .right-column .content table#product .imageRow {width:116px}
 
 #content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:none;  font-weight:bold; color:#FFF; font-size:13px }
@@ -135,7 +135,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 
 #footer-end-wall {clear:both; background:none repeat scroll 0 0 #DADADA}
 #footer-end-wall #end-wall {width:1000px; margin:auto; height:105px; background: none repeat scroll 0 0 #DADADA;}
-#footer-end-wall #end-wall .adres {width:620px; float:left; text-align:center; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; margin-top: 21px;}
+#footer-end-wall #end-wall .adres {width:620px; float:left; text-align:center; padding: 5px 20px; color: #1B2940; font-family: Arial; font-size: 12px; margin-top: 21px;}
 #footer-end-wall #end-wall .adres p {padding:5px;text-align:left !important}
 
 #footer-end-wall #end-wall .design {width:270px; text-align:center; float:left; padding:5px 30px; color: #1B2940; font-family: Arial; font-size: 12px; }
@@ -204,7 +204,7 @@ ul.children li {border-bottom: 1px solid #808080; margin:0; padding:4px 10px 4px
     .product-demand div.logo span.plugin_picture img {border:none; border-radius:none; float: none; margin:0; width:375px;}
     .product-demand form {width:796px; margin:auto}
     .product-demand div.tarih { text-align:right}
-    .product-demand table {border-width:2px 1px 1px 2px; border-style:solid; border-color:#444; margin-top:25px;}
+    .product-demand table {border-width:2px 1px 1px 2px; border-style:solid; border-color:#444; float:left; margin:15px 5px}
     .product-demand table tr {}
     .product-demand table tr th {border-right: 1px solid #444; border-bottom: 2px solid #444; padding:12px 5px;}
     .product-demand table tr th.ilk {width:30px}
