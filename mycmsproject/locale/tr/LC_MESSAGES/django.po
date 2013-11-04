@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 09:01-0500\n"
-"PO-Revision-Date: 2013-11-02 16:01+0200\n"
+"POT-Creation-Date: 2013-11-04 06:48-0600\n"
+"PO-Revision-Date: 2013-11-04 14:49+0200\n"
 "Last-Translator:  <cbilgili@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgid "Product Search Plugin"
 msgstr "Ürün Arama Eklentisi"
 
 #: products/templates/products/category_view.html:30
-#: products/templates/products/category_view.html:60
+#: products/templates/products/category_view.html:68
 #: products/templates/products/index.html:23
 #: products/templates/products/index.html:53
 #: products/templates/products/product_view.html:13
@@ -77,8 +77,27 @@ msgstr "Yüksel No"
 msgid "Picture"
 msgstr "Resim"
 
-#: products/templates/products/category_view.html:32
-#: products/templates/products/category_view.html:62
+#: products/templates/products/category_view.html:33
+#: products/templates/products/category_view.html:71
+#: products/templates/products/index.html:26
+#: products/templates/products/index.html:56
+#: products_sec/templates/products/category_view.html:26
+#: products_sec/templates/products/category_view.html:53
+#: products_sec/templates/products/product_view.html:35
+msgid "Description"
+msgstr "Açıklama"
+
+#: products/templates/products/category_view.html:69
+#: products/templates/products/index.html:24
+#: products/templates/products/index.html:54
+#: products_sec/templates/products/category_view.html:24
+#: products_sec/templates/products/category_view.html:51
+#: products_sec/templates/products/index.html:15
+#: products_sec/templates/products/index.html:42
+msgid "Image"
+msgstr "Resim"
+
+#: products/templates/products/category_view.html:70
 #: products/templates/products/index.html:25
 #: products/templates/products/index.html:55
 #: products/templates/products/product_view.html:14
@@ -90,27 +109,7 @@ msgstr "Resim"
 msgid "OEM Numbers"
 msgstr "OEM No"
 
-#: products/templates/products/category_view.html:33
-#: products/templates/products/category_view.html:63
-#: products/templates/products/index.html:26
-#: products/templates/products/index.html:56
-#: products_sec/templates/products/category_view.html:26
-#: products_sec/templates/products/category_view.html:53
-#: products_sec/templates/products/product_view.html:35
-msgid "Description"
-msgstr "Açıklama"
-
-#: products/templates/products/category_view.html:61
-#: products/templates/products/index.html:24
-#: products/templates/products/index.html:54
-#: products_sec/templates/products/category_view.html:24
-#: products_sec/templates/products/category_view.html:51
-#: products_sec/templates/products/index.html:15
-#: products_sec/templates/products/index.html:42
-msgid "Image"
-msgstr "Resim"
-
-#: products/templates/products/category_view.html:68
+#: products/templates/products/category_view.html:76
 #: products/templates/products/index.html:61
 #: products_sec/templates/products/category_view.html:58
 #: products_sec/templates/products/index.html:50
@@ -195,7 +194,15 @@ msgstr "^-- Lütfen Yukarıdan Seçiniz"
 
 #: templates/elements/footer.html:26
 msgid "Taksim Caddesi No:53 Taksim / Istanbul - Turkey"
-msgstr "Taksim Caddesi No:53 Taksim / Istanbul - Türkiye"
+msgstr "Taksim Caddesi No:53 Taksim / İstanbul - Türkiye"
+
+#: templates/elements/footer.html:27
+msgid ""
+"TEL : +90 (212) 254 75 50 (pbx)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : +90 (212) "
+"250 50 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-MAIL : yuksel@yukselautomotive.com"
+msgstr ""
+"TEL : (0212) 254 75 50 (pbx)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : (0212) 250 "
+"50 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-MAIL : yuksel@yukselautomotive.com"
 
 #~ msgid "Download Catalogue"
 #~ msgstr "Katalog İndir"

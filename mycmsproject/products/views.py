@@ -67,7 +67,7 @@ def search_product(request):
     try:
         if oem_query:
             results = Product.objects.filter(oem__icontains=oem_query).order_by('category__id', 'yuksel_no') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__id', 'yuksel_no')
-            if results.length > 0:
+            if results.count() > 0:
                 category = results[0].category
             else:
                 category = None
