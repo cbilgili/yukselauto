@@ -90,6 +90,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .right-column{width:650px; float:left; padding:10px 10px 10px 0;}
 #content-wall .content-left-right .right-column .content {padding:7px;}
 #content-wall .content-left-right .right-column .content .product-titile {width:128px; font-size:10px; font-weight: bold; display:block; margin:8px 0}
+#content-wall .content-left-right .right-column .content h3 {text-align:left}
 
 /*
 #content-wall .content-left-right .right-column .content table {}
@@ -100,7 +101,7 @@ p {line-height: 18px; text-align: justify; text-indent:10px;}
 #content-wall .content-left-right .right-column .content table tr td img {border:1px solid #CECECE; margin-bottom:15px;}
 */
 
-#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; }
+#content-wall .content-left-right .right-column .content table#product {margin-top:20px; border:1px solid #1484C5; border-bottom:none; text-align:center;}
 #content-wall .content-left-right .right-column .content table#product .imageRow {width:116px}
 
 #content-wall .content-left-right .right-column .content table#product thead tr td {background:#1484C5; padding:8px; border-bottom:none;  font-weight:bold; color:#FFF; font-size:13px }
@@ -214,8 +215,8 @@ ul.children li {border-bottom: 1px solid #808080; margin:0; padding:4px 10px 4px
 
 
 table.product-details {border-width:2px 1px 1px 2px; border-style:solid; border-color:#005CA1;}
-table.product-details tr th {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; height:16px;  }
-table.product-details tr td {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; }
+table.product-details tr th {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px; height:16px; text-align:center; }
+table.product-details tr td {border-width:0 1px 1px 0; border-style:solid; border-color:#005CA1; padding:9px;text-align:center; }
 table.product-details tr td .imageRow {width:132px; margin:auto;}
 
 
