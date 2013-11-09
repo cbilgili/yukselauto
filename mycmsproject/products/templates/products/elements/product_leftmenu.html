@@ -6,7 +6,7 @@
 
 <ul class="root" id="nav">
     {% recursetree category_all %}
-        {% if not node.is_leaf_node %}
+        {% if not node.is_leaf_node and node.id != 117 %}
             <li><a href="javascript:void(0)">{{ node.name }}</a>
         {% else %}
             <li><a href="{{ node.get_absolute_url }}" {% if category.id == node.id %}class='chosen'{% endif %}>{{ node.name }}</a>

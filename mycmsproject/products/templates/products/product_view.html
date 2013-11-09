@@ -21,9 +21,9 @@
                     <div class="single"><a rel="lightbox" href="{{MEDIA_URL}}{{ product.image }}"><img src="{{MEDIA_URL}}{{ product.image }}" alt="" width="115"/></a></div>
                 </div>
             </td>
-            <td align="center">{% if product.oem != None %}{{ product.oem|linebreaksbr }}{% else %}&nbsp;{% endif %}</td>
-            <td align="center">{% if product.type != None %}{{ product.type|safe }}{% else %}&nbsp;{% endif %}</td>
-            <td align="center">{% if product.engine != None %}{{ product.engine|linebreaksbr }}{% else %}&nbsp;{% endif %}</td>
+            <td align="center">{% if product.oem != None and product.oem != '' %}{{ product.oem|linebreaksbr }}{% else %}&nbsp;{% endif %}</td>
+            <td align="center">{% if product.type != None and product.type != '' %}{{ product.type|safe }}{% else %}&nbsp;{% endif %}</td>
+            <td align="center">{% if product.engine != None and product.engine != '' %}{{ product.engine|linebreaksbr }}{% else %}&nbsp;{% endif %}</td>
         </tr>
         <tr>
             <!--<td align="center">{{ product.detail|safe }}&nbsp;</td>-->
