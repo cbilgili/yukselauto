@@ -66,7 +66,7 @@ def search_product(request):
     oem_query = request.GET.get('oem')
     try:
         if oem_query:
-            results = Product.objects.filter(oem__icontains=oem_query).order_by('category__id', 'yuksel_no') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__id', 'yuksel_no')
+            results = Product.objects.filter(oem__icontains=oem_query).order_by('category__name', 'id') | Product.objects.filter(yuksel_no__icontains=oem_query).order_by('category__name', 'id')
             if results.count() > 0:
                 category = results[0].category
             else:
@@ -75,7 +75,7 @@ def search_product(request):
             category_id = request.GET.get('marka')
             category = Category.objects.get(pk=category_id)
             oem_query = category.name
-            results = Product.objects.filter(category_id = category_id).order_by('category__id', 'yuksel_no')
+            results = Product.objects.filter(category_id = category_id).order_by('category__name', 'id')
     except Exception:
         results = None
         category = None
